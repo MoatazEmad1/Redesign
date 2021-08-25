@@ -3,6 +3,10 @@ import styled from 'styled-components'
 export const Container=styled.div`
 flex:0.8;
 margin:20px;
+span{
+    font-weight:600;
+    color:#212A54;
+}
 `
 
 export const TopDashBoardContainer=styled.div`

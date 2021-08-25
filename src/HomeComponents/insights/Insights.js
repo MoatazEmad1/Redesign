@@ -2,7 +2,7 @@ import React from 'react'
 import {InsightsContainer,Span,myProgress,myBar} from '../../styles/Insights.styles'
 import {Bar,Line,Doughnut,Pie} from 'react-chartjs-2';
 
-import {state,state2,state3,state4,state5,state6,state7,state8,state9,options,options2,options3,options4} from './config'
+import {state,state2,state3,state4,state5,state6,state7,state8,state9,state10,options,options2,options3,options4} from './config'
 
 function Insights() {
   
@@ -107,15 +107,27 @@ function Insights() {
             </div>
             <div className='rowLineContainer'>
                 <div className='fsChart'>
+                    <span>Total Amount Of Business Transactions</span>
                 <Doughnut data={state9} options={options3}/>
+
                    
                 </div>
                 <div className='MdChart'>
+                <span>Total Amount Of Individual Transactions</span>
                 <Pie data={state8} options={options3}/>
                 </div>
                 <div className='lsChart'>
-                <Pie data={state6} options={options3}/>
+                <span>Total Amount Of Withdrawals Transactions</span>
+                <div id='progress'>
+                   
+                    <div id='bar'>
+                        <span>40%</span>
+                    </div>
                 </div>
+            
+                
+                </div>
+               
             </div>
             
         </InsightsContainer>

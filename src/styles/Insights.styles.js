@@ -12,6 +12,68 @@ flex:0.8;
 
     
 }
+.fsChart{
+background-color:white ;
+border-radius: 10px;
+padding: 10px;
+margin-top: 10px;
+margin-right: 5px;
+span{
+    font-size: 20px;
+    color: #212A54;
+    font-weight: bold;
+}
+}
+.MdChart{
+    background-color:white ;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 5px;
+    span{
+        font-size: 20px;
+        color: #212A54;
+        font-weight: bold;
+    }
+}
+.lsChart{
+    background-color:white ;
+    border-radius: 10px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-right: 5px;
+    span{
+        font-size: 20px;
+        color: #212A54;
+        font-weight: bold;
+    }
+}
+#progress{
+ position: relative;
+    width: 285px;
+    height: 285px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    border: 20px solid #FD2227;
+    border-left: 20px solid #FFE5D3;
+    border-radius: 50%;
+   
+}
+
+#bar{
+    background-color:#FD2227;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span{
+        color:white;
+    }
+}
 .lineContainer{
     background-color: white;
     width:200px;
@@ -162,6 +224,7 @@ flex:0.8;
         font-size: 20px;
     }
 }
+
 `
 
 export const Span=styled.span`

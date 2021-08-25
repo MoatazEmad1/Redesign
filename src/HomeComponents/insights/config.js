@@ -120,7 +120,7 @@ export  const state7 = {
     ]
 }
 export  const state8 = {
-    labels: ['05', '10', '20'],
+    labels: ['Restless', 'Awake', 'Deep'],
     datasets: [
       {
         label: 'piMd',
@@ -133,25 +133,52 @@ export  const state8 = {
     ]
 }
 export  const state9 = {
-    labels: ['05', '10', '20'],
+    labels: ['Restless', 'Awake', 'Deep'],
     datasets: [
       {
         label: 'fsChart1',
-        backgroundColor: ['#FD2227'],
+        backgroundColor: ['#12B886','#FCCC42','#639DFF'],
         borderColor: '#639DFF',
         borderWidth: 0,
-        data: [10],
-        spacing:50
+        data: [10,0,0],
+       
+      
       
       },
       {
         label: 'fsChart2',
-        backgroundColor: ['#0561FC'],
-        borderColor: '#639DFF',
+        backgroundColor: ['#FCCC42'],
+        borderColor: '#FCCC42',
         borderWidth: 0,
-        data: [5],
+        data: [0,5,0],
+      
       
       },
+      {
+        label: 'fsChart3',
+        backgroundColor: ['#639DFF'],
+        borderColor: '#639DFF',
+        borderWidth: 0,
+        data: [0,0,1], 
+        
+      
+      },
+    ]
+}
+export  const state10 = {
+    labels: ['Restless','Awake','Deep'],
+    datasets: [
+      {
+        label: 'lsChart1',
+        backgroundColor: ['#FD2227','#FCCC42','#639DFF'],
+        borderColor: '#FFE5D3',
+ 
+        borderWidth: 0,
+        spacing:50,
+        data: [1,0,0],
+       
+      },
+     
     ]
 }
 export const options={
@@ -198,7 +225,13 @@ export const options2={
 export const options3={
     plugins:{
          legend: {
-            display: false,
+            display: true,
+            position:'bottom',
+    
+            labels: {
+              usePointStyle: true,
+         
+            }
         },
        
     }
