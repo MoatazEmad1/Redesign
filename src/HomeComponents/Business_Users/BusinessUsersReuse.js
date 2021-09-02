@@ -26,18 +26,18 @@ function BusinessUsersReuse({user_name,business_name,mobile,email}) {
   }
     return (
         <BusinessUsersReuseContainer>
-            <div className='WraperContentLf'>
-                  <div className='InfoUser' onClick={handelDetailsPopUp}>
+           <div className='burc'>
+           <div className='InfoUser' onClick={handelDetailsPopUp}>
                 <InfoOutlinedIcon className='accessInfoUser'/>
                 <img src={image} alt=''/>
                </div>
-               <span>{user_name}</span>
+               <span id='username'>{user_name}</span>
                <AccountBalanceOutlinedIcon className='bankIcon' onClick={handelUserPopUp}/>
-               <span>{business_name}</span>
-               <span>{mobile}</span>
-               <span>{email}</span>
-            </div>
-            <div className='WraperContentRt'>
+               <span id='be'>{business_name}</span>
+               <span id='mobile'>{mobile}</span>
+               <span id='email'>{email}</span>
+          
+           
             <div onClick={(e)=>dispatch(SetNewHomeState('Transactions'))} className='BtnContainer'>
             <ImportExportOutlinedIcon/>
             <span>Transactions</span>
@@ -46,13 +46,17 @@ function BusinessUsersReuse({user_name,business_name,mobile,email}) {
            
             <span>Active</span>
             </div>
+           </div>
+                  
 
-            </div>
-            <PopUp ht={40} wd={60} showBlockOrNone={display}>
+            
+            <PopUp showBlockOrNone={display} wd='700' ht='494'>
                 <div className='popupModel'>
-                    <div className='headerPopUp'>
-                    <span>Motaz Emad G.Bank Account</span>  
-                    <span onClick={handelCloseModel}>X</span>
+                    <div className='headerPopUp BS_Bank'>
+                    <span id='title' className='BS_Bank_Title'>Motaz Emad G.Bank Account</span>  
+                    <div id='closeBtn'>
+                         <span id='close'  onClick={handelCloseModel}>x</span>
+                    </div>
                     </div>
                     <div className='popupModelContent'>
                         <div className='popupModelContentLf'>
@@ -75,11 +79,13 @@ function BusinessUsersReuse({user_name,business_name,mobile,email}) {
 
                </PopUp>
 
-               <PopUp showBlockOrNone={displayDetails} ht={55} wd={60}>
+               <PopUp showBlockOrNone={displayDetails} wd='775' ht='590'>
                <div className='popupModel'>
-                    <div className='headerPopUp'>
-                    <span>Ramadan Bags | kiwe Business Details</span>  
-                    <span onClick={handelCloseDetails}>X</span>
+                    <div className='headerPopUp BS_Bank'>
+                    <span id='title' className='BS_Bank_Title'>Ramadan Bags | kiwe Business Details</span>  
+                    <div id='closeBtn'>
+                         <span id='close'  onClick={handelCloseDetails}>x</span>
+                    </div>
                     </div>
                     <div className='popupModelContent'>
                         <div className='popupModelContentLf'>
@@ -111,7 +117,7 @@ function BusinessUsersReuse({user_name,business_name,mobile,email}) {
                     </div>
                    
                 </div>
-               </PopUp>
+               </PopUp> 
                        
         </BusinessUsersReuseContainer>
     )

@@ -24,57 +24,62 @@ function TransactionFees() {
                </div>
                 </WraperHeader>
                 <WraperContent>
-                <span>Free type</span>
-                <span>Fees</span>
-                <span>Action</span>
+                <span id='id'>Free type</span>
+                <span id='name'>Fees</span>
+                <span id='action'>Action</span>
                 </WraperContent>
+
                 <WraperInfo>
-                <div className='fsContainer'>
+              
                 <ExpandMoreOutlinedIcon className='downArrow'/>
-                <span>withdraw_money</span>
-                </div>
-                <span className='number'>3</span>
-                <button>Edit</button>
+                <span id='wy'>withdraw_money</span>
+               
+                <span id='num' className='number'>3</span>
+                <button id='et'>Edit</button>
+                </WraperInfo>
+
+                <WraperInfo>
+
+                
+                <ExpandMoreOutlinedIcon className='downArrow'/>
+                <span id='wy'>withdraw_money</span>
+               
+                <span id='num' className='number'>3</span>
+                <button id='et'>Edit</button>
                 </WraperInfo>
                 <WraperInfo>
-                <div className='fsContainer'>
+                
                 <ExpandMoreOutlinedIcon className='downArrow'/>
-                <span>withdraw_money</span>
-                </div>
-                <span className='number'>3</span>
-                <button>Edit</button>
+                <span  id='wy'>withdraw_money</span>
+               
+                <span id='num' className='number'>3</span>
+                <button  id='et'>Edit</button>
                 </WraperInfo>
                 <WraperInfo>
-                <div className='fsContainer'>
+                
                 <ExpandMoreOutlinedIcon className='downArrow'/>
-                <span>withdraw_money</span>
-                </div>
-                <span className='number'>3</span>
-                <button>Edit</button>
+                <span id='wy'>withdraw_money</span>
+               
+                <span id='num' className='number'>3</span>
+                <button id='et'>Edit</button>
                 </WraperInfo>
+
                 <WraperInfo>
-                <div className='fsContainer'>
-                <ExpandMoreOutlinedIcon className='downArrow'/>
-                <span>withdraw_money</span>
-                </div>
-                <span className='number'>3</span>
-                <button>Edit</button>
+                
+                <ExpandMoreOutlinedIcon  className='downArrow'/>
+                <span id='wy'>withdraw_money</span>
+               
+                <span id='num' className='number'>3</span>
+                <button id='et'>Edit</button>
                 </WraperInfo>
+
                 <WraperInfo>
-                <div className='fsContainer'>
+                
                 <ExpandMoreOutlinedIcon className='downArrow'/>
-                <span>withdraw_money</span>
-                </div>
-                <span className='number'>3</span>
-                <button>Edit</button>
-                </WraperInfo>
-                <WraperInfo>
-                <div className='fsContainer'>
-                <ExpandMoreOutlinedIcon className='downArrow'/>
-                <span>withdraw_money</span>
-                </div>
-                <span className='number'>3</span>
-                <button>Edit</button>
+                <span id='wy'>withdraw_money</span>
+               
+                <span id='num' className='number'>3</span>
+                <button id='et'>Edit</button>
                 </WraperInfo>
             </Wraper>
             <Paginate/>

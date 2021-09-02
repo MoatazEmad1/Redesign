@@ -15,111 +15,113 @@ function EventsDetails() {
                         </div>
                         <div className='personContent'> 
                             <div className='section'>
-                                <div className='content'>
-                                    <span id='fs'>Event:</span>
-                                    <span>Cv Get At</span>
+                                <div className='content '>
+                                    <span id='fs' className='first'>Event:</span>
+                                    <span className='__title1'>Cv Get At</span>
                                 </div>
-                                <div className='content'>
-                                    <span id='fs'>Event Date:</span>
-                                    <span>16 may 2020</span>
+                                <div className='content '>
+                                    <span id='fs' className='sc'>Event Date:</span>
+                                    <span className='__title2'>16 may 2020</span>
                                 </div>
-                                <div className='content'>
-                                    <span id='fs'>Created At:</span>
-                                    <span>16 may 2020 10PM</span>
+                                <div className='content '>
+                                    <span id='fs' className='td'>Created At:</span>
+                                    <span className='__title3'>16 may 2020 10PM</span>
                                 </div>
                             </div>
-                            <div className='section'>
+                            <div className='section '>
                             <div className='content'>
-                                    <span id='fs'>Owner:</span>
-                                    <span>Mohammed Khalifa</span>
+                                    <span id='fs' className='fh'>Owner:</span>
+                                    <span className='__title4'>Mohammed </span>
+                                </div>
+                                <div className='content '>
+                                    <span id='fs' className='fv'>Balance:</span>
+                                    <button id='btn'className='__title5'>E1012</button>
                                 </div>
                                 <div className='content'>
-                                    <span id='fs'>Balance:</span>
-                                    <button id='btn'>E1012</button>
-                                </div>
-                                <div className='content'>
-                                    <span id='fs'>Desdription:</span>
+                                    <span id='fs' className='six'>Desdription:</span>
                                    
                                 </div>
                             </div>
                         </div>
                     </WraperHeader>
                     <div className='contentInfo'>
-                        <div className='info'>
-                           <span>Profile Image</span>
-                        </div>
-                        <div className='info'>
-                           <span>Profile Name</span>
-                        </div>
-                        <div className='info'>
-                           <span>Amount</span>
-                        </div>
+                      
+                           <span id='pe'>Profile Image</span>
+                     
+                      
+                           <span id='pn'>Profile Name</span>
+                     
+                      
+                           <span id='at'>Amount</span>
+                     
                     </div>
                     <div className='reuse-content'>
-                    <div className='reuseinfo'>
-                          <img src={image} alt=''/>
-                        </div>
-                        <div className='reuseinfo'>
-                           <span>moataz</span>
-                        </div>
-                        <div className='reuseinfo'>
-                           <span>1322 euro</span>
-                        </div>
+                   
+                          <img id='im' src={image} alt=''/>
+                     
+                       
+                           <span id='pn'>moataz</span>
+                     
+                       
+                           <span id='at'>1322 euro</span>
+                     
                     </div>
                     <div className='reuse-content'>
-                    <div className='reuseinfo'>
-                          <img src={image} alt=''/>
-                        </div>
-                        <div className='reuseinfo'>
-                           <span>moataz</span>
-                        </div>
-                        <div className='reuseinfo'>
-                           <span>1322 euro</span>
-                        </div>
+                  
+                    <img id='im' src={image} alt=''/>
+                     
+                       
+                     <span id='pn'>moataz</span>
+               
+                 
+                     <span id='at'>1322 euro</span>
+                      
                     </div>
                     <div className='reuse-content'>
-                    <div className='reuseinfo'>
-                    <span>Not available</span>
-                        </div>
-                        <div className='reuseinfo'>
-                           <span>moataz</span>
-                        </div>
-                        <div className='reuseinfo'>
-                           <span>1322 euro</span>
-                        </div>
+
+                
+                     
+                         <span id='pe'>Not available</span>
+                           <span id='pn'>moataz</span>
+                     
+                    
+                           <span id='at'>1322 euro</span>
+                  
+                      
+                    
+                      
                     </div>
                     <div className='reuse-content'>
-                    <div className='reuseinfo'>
-                    <span>Not available</span>
-                        </div>
-                        <div className='reuseinfo'>
-                           <span>moataz</span>
-                        </div>
-                        <div className='reuseinfo'>
-                           <span>1322 euro</span>
-                        </div>
+                  
+                    <span id='pe'>Not available</span>
+                           <span id='pn'>moataz</span>
+                     
+                    
+                           <span id='at'>1322 euro</span>
+                  
+                       
                     </div>
                     <div className='reuse-content'>
-                    <div className='reuseinfo'>
-                    <span>Not available</span>
-                        </div>
-                        <div className='reuseinfo'>
-                           <span>moataz</span>
-                        </div>
-                        <div className='reuseinfo'>
-                           <span>1322 euro</span>
-                        </div>
+                  
+                    <span id='pe'>Not available</span>
+                           <span id='pn'>moataz</span>
+                     
+                    
+                           <span id='at'>1322 euro</span>
+                  
+                       
                     </div>
                     <div className='reuse-content'>
-                    <div className='reuseinfo'>
-                          <img src={image} alt=''/>
-                        </div>
-                        <div className='reuseinfo'>
-                           <span>moataz</span>
-                        </div>
-                        <div className='reuseinfo'>
-                           <span>1322 euro</span>
-                        </div>
+                  
+                    <img id='im' src={image} alt=''/>
+                     
+                       
+                     <span id='pn'>moataz</span>
+               
+                 
+                     <span id='at'>1322 euro</span>
+                      
+                      
                     </div>
             </Wraper>
             <Paginate/>

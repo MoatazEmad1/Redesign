@@ -21,59 +21,53 @@ function ReuseIndividualUser({fs,ls,email,mobile,dob}) {
   
     return (
         <ReuseIndividualUserComponent>
-            
-            <div className='WraperContentLf'>
-                    <div onClick={handelUserPopUp} className='InfoUser'>
+            <div className='IndR'>
+            <div onClick={handelUserPopUp} className='InfoUser'>
                             <InfoOutlinedIcon className='accessInfoUser'/>
                         <img src={image} alt=''/>
                    </div>
-                       
-                           <div className='WraperContentContainer'>
-
-                                    <span className='WraperContentLfSpan'>{fs}</span>
-                        
-                                    <span className='WraperContentLfSpan'>{ls}</span>
-                                
-                                    <span className='WraperContentLfSpan'>{email}</span>
-                           </div>
-                     
-                    
-                     </div>
-            
-               
-                        <div className='WraperContentRt'>
-                            <span>{mobile}</span>
-                    
-                            <span>{dob}</span>
-                       
+                    <span id='fs'>{fs}</span>
+                    <span id='ls'>{ls}</span>
+                    <span id='email'>{email}</span>
+                    <span id='mobile'>{mobile}</span>
+                    <span id='dob'>{dob}</span>
+                            
            
         
-                <div className='infoContainer'>
+                <div className='infoContainer ic1'>
                     <PermIdentityIcon /> 
                     <span>Childrens</span>
                     
                 </div>
           
-                <div className='infoContainer'>
+                <div className='infoContainer ic2'>
                     <EventNoteIcon/> 
                     <span>Events</span>
                 </div>
           
-                <div onClick={()=>dispatch(SetNewHomeState('Transactions'))} className='infoContainer'>
+                <div onClick={()=>dispatch(SetNewHomeState('Transactions'))} className='infoContainer ic3'>
                     <ImportExportIcon/> 
                     <span>Transactions</span>
                 </div>
                <div className='infobtnContainer'>
                  <span>Active</span>
                </div >
+         
+            
+            </div>
+
+        
             
 
-                </div>
-                <PopUp showBlockOrNone={display}>
+
+                <PopUp showBlockOrNone={display} wd='540' ht='635'>
                 <div className='popupModel'>
                     <div className='headerPopUp'>
-                    <span>Account Info</span>  
-                    <span onClick={handelCloseModel}>X</span>
+                    <span id='title'>Account Info</span>  
+                    <div id='closeBtn'>
+                         <span id='close'  onClick={handelCloseModel}>x</span>
+                    </div>
+                   
                     </div>
                     <div className='popupModelContent'>
                         <div className='popupModelContentLf'>

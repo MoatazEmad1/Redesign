@@ -4,36 +4,36 @@ import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined'
 function EventsReuse({id,users,owner,event_name}) {
     return (
         <EventsReuseContainer>
-            <div className='contentInfo'>
-            <input type='checkbox'/>
-            <span>{id}</span>
-            </div>
-            <div className='contentInfo'>
-            <span>{users}</span>
-            </div>
-            <div className='contentInfo'>
-            <span>{owner}</span>
-            </div>
-            <div className='contentInfo'>
-            <span>{event_name}</span>
-            </div>
-            <div className='contentInfo'>
-            <span>10 nov 2020</span>
-            </div>
-            <div className='contentInfo'>
-            <span>100 euro</span>
-            </div>
-            <div className='contentInfo info'>
+          
+            <input id='cx' type='checkbox'/>
+            <span id='ed'>{id}</span>
+            
+          
+            <span id='us'>{users}</span>
+            
+          
+            <span id='or'>{owner}</span>
+            
+          
+            <span id='et'>{event_name}</span>
+            
+          
+            <span id='ete'>10 nov 2020</span>
+            
+          
+            <span id='el'>100 euro</span>
+            
+            <div id='cs' className='info1'>
                 <PersonOutlineOutlinedIcon/>
             <span >contributers</span>
             </div>
-            <div className='contentInfo info'>
+            <div id='ts' className='info2'>
                 <PersonOutlineOutlinedIcon/>
             <span >transactions</span>
             </div>
-            <div className='contentInfo '>
-            <span>20 dec 2020 10AM</span>
-            </div>
+         
+            <span id='ct'>20 dec 2020 10AM</span>
+          
         </EventsReuseContainer>
     )
 }

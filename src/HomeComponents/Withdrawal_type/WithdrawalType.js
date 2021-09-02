@@ -29,19 +29,19 @@ function WithdrawalType() {
                </div>
                 </WraperHeader>
                 <WraperContent>
-                <span>ID</span>
-                <span>Name</span>
-                <span>Action</span>
+                <span id='id'>ID</span>
+                <span id='name'>Name</span>
+                <span id='action'>Action</span>
                 </WraperContent>
                 <WraperInfo>
-                    <span>1</span>
-                    <span>moataz</span>
-                    <button>Edit</button>
+                    <span id='id'>1</span>
+                    <span id='name'>moataz</span>
+                    <button id='action'>Edit</button>
                 </WraperInfo>
                 <WraperInfo>
-                    <span>2</span>
-                    <span>ahmed</span>
-                    <button>Edit</button>
+                <span id='id'>2</span>
+                    <span id='name'>ahmed</span>
+                    <button id='action'>Edit</button>
                 </WraperInfo>
             </Wraper>
             <Paginate/>

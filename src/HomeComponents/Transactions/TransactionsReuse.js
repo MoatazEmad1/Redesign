@@ -4,37 +4,37 @@ import {WraperContentInfo} from '../../styles/Transactions.styles'
 function TransactionsReuse({moneyIn,name,percent,charge,amount,msg,cdt}) {
     return (
         <WraperContentInfo>
-            <div className='Info'>
-<span>{moneyIn}</span>
-            </div>
-            <div className='Info'>
-          <span>{name}</span>
+           
+              <span id='te'>{moneyIn}</span>
+           
+           
+          <span id='fn'>{name}</span>
 
-            </div>
-            <div className='Info'>
-                <span>{charge}</span>
+           
+           
+                <span id='tne'>{charge}</span>
 
-            </div>
-            <div className='Info'>
-          <span>{percent}</span>
+           
+           
+          <span id='tce'>{percent}</span>
 
-            </div>
-            <div className='Info'>
-                    <span>{amount}</span>
+           
+           
+                    <span id='at'>{amount}</span>
 
-            </div>
-            <div className='Info'>
-                    <span>{msg}</span>
+           
+           
+                    <span id='msg'>{msg}</span>
 
-            </div>
-            <div className='Info'>
-          <span>{cdt}</span>
+           
+           
+          <span id='cdt'>{cdt}</span>
 
-            </div>
-            <div className='Info'>
-          <span>-</span>
+           
+           
+          <span id='st'>-</span>
 
-            </div>
+           
           
           
 

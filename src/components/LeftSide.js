@@ -1,9 +1,8 @@
 import React,{useState} from 'react'
-import {Container,LfContainer,InfoLfContainer} from '../styles/LeftSide.styles'
+import {Container,LfContainer} from '../styles/LeftSide.styles'
 import ArrowRightIcon from '@material-ui/icons/ArrowRight';
-import AssessmentIcon from '@material-ui/icons/Assessment';
-import PersonIcon from '@material-ui/icons/Person';
-import PeopleAltIcon from '@material-ui/icons/PeopleAlt';
+import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
+import PeopleAltOutlinedIcon from '@material-ui/icons/PeopleAltOutlined';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
 import ImportExportOutlinedIcon from '@material-ui/icons/ImportExportOutlined';
 import DescriptionOutlinedIcon from '@material-ui/icons/DescriptionOutlined';
@@ -15,6 +14,8 @@ import NotificationsNoneOutlinedIcon from '@material-ui/icons/NotificationsNoneO
 import DashboardOutlinedIcon from '@material-ui/icons/DashboardOutlined';
 import {useDispatch} from 'react-redux'
 import {SetNewHomeState} from '../Redux/Actions/HomeActionCreator'
+import InsertChartOutlinedIcon from '@material-ui/icons/InsertChartOutlined';
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 function LeftSide() {
     const dispatch=useDispatch()
     const [lfBg,setlfBg]=useState({
@@ -53,10 +54,13 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Dashboard'))
                 }}>
-           
-           <DashboardOutlinedIcon/>
-            <span >Dashboard</span>
-            <ArrowRightIcon className='ArrowLfContainer'/>
+         
+                <DashboardOutlinedIcon className='IconPS'/>
+                <span className='titlePs'>Dashboard</span>
+
+          
+         
+            <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
             <LfContainer selected={lfBg.it2} onClick={(e)=>{
                 setlfBg({
@@ -76,9 +80,9 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Insights'))
                 }}>
-              <AssessmentIcon/>
-                <InfoLfContainer>Insights</InfoLfContainer>
-                <ArrowRightIcon className='ArrowLfContainer'/>
+              <InsertChartOutlinedIcon className='IconPS'/>
+                <span className='titlePs'>Insights</span>
+                <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
             <LfContainer selected={lfBg.it3} onClick={(e)=>{
                 setlfBg({
@@ -98,9 +102,9 @@ function LeftSide() {
                 })
                dispatch(SetNewHomeState('Admin'))
                 }}>
-              <PersonIcon/>
-                <InfoLfContainer>Admin</InfoLfContainer>
-                <ArrowRightIcon className='ArrowLfContainer'/>
+              <PersonOutlineOutlinedIcon className='IconPS'/>
+                <span className='titlePs'>Admin</span>
+                <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
             <LfContainer selected={lfBg.it4} onClick={(e)=>{
                 setlfBg({
@@ -120,9 +124,9 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Individual user'))
                 }}>
-              <PeopleAltIcon/>
-                <InfoLfContainer>Individual user</InfoLfContainer>
-                <ArrowRightIcon className='ArrowLfContainer'/>
+              <PeopleAltOutlinedIcon  className='IconPS'/>
+                <span className='titlePs'>Individual user</span>
+                <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
             <LfContainer selected={lfBg.it5} onClick={(e)=>{
                 setlfBg({
@@ -142,9 +146,9 @@ function LeftSide() {
                 })
                dispatch(SetNewHomeState('Business user'))
                 }}>
-              <LocalMallOutlinedIcon/>
-                <InfoLfContainer>Business user</InfoLfContainer>
-                <ArrowRightIcon className='ArrowLfContainer'/>
+              <LocalMallOutlinedIcon className='IconPS'/>
+                <span className='titlePs'>Business user</span>
+                <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
             <LfContainer selected={lfBg.it6} onClick={(e)=>{
                 setlfBg({
@@ -164,9 +168,9 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Transaction'))
                 }}>
-              <ImportExportOutlinedIcon/>
-                <InfoLfContainer>Transaction</InfoLfContainer>
-                <ArrowRightIcon className='ArrowLfContainer'/>
+              <ImportExportOutlinedIcon className='IconPS'/>
+                <span className='titlePs'>Transaction</span>
+                <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
             <LfContainer selected={lfBg.it7} onClick={(e)=>{
                 setlfBg({
@@ -186,9 +190,9 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Transaction Fees'))
                 }}>
-              <ImportExportOutlinedIcon/>
-                <InfoLfContainer>Transaction Fees</InfoLfContainer>
-                <ArrowRightIcon className='ArrowLfContainer'/>
+              <ImportExportOutlinedIcon className='IconPS'/>
+                <span className='titlePs'>Transaction Fees</span>
+                <ChevronRightIcon  className='arrowPs'/>
             </LfContainer>
             <LfContainer selected={lfBg.it8} onClick={(e)=>{
                 setlfBg({
@@ -208,9 +212,9 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Withdrawal list'))
                 }}>
-              <DescriptionOutlinedIcon/>
-                <InfoLfContainer>Withdrawal list</InfoLfContainer>
-                <ArrowRightIcon className='ArrowLfContainer'/>
+              <DescriptionOutlinedIcon className='IconPS'/>
+                <span  className='titlePs'>Withdrawal list</span>
+                <ChevronRightIcon  className='arrowPs'/>
             </LfContainer>
             <LfContainer selected={lfBg.it9} onClick={(e)=>{
                 setlfBg({
@@ -230,9 +234,9 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Withdrawal type'))
                 }}>
-              <AssignmentOutlinedIcon/>
-                <InfoLfContainer>Withdrawal type</InfoLfContainer>
-                <ArrowRightIcon className='ArrowLfContainer'/>
+              <AssignmentOutlinedIcon className='IconPS'/>
+                <span className='titlePs'>Withdrawal type</span>
+                <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
             <LfContainer selected={lfBg.it10} onClick={(e)=>{
                 setlfBg({
@@ -252,9 +256,9 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Offer list'))
                 }}>
-              <LocalOfferOutlinedIcon/>
-                <InfoLfContainer>Offer list</InfoLfContainer>
-                <ArrowRightIcon className='ArrowLfContainer'/>
+              <LocalOfferOutlinedIcon className='IconPS'/>
+                <span className='titlePs'>Offer list</span>
+                <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
             <LfContainer selected={lfBg.it11} onClick={(e)=>{
                 setlfBg({
@@ -274,9 +278,9 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Events'))
                 }}>
-              <EventNoteOutlinedIcon/>
-                <InfoLfContainer>Events</InfoLfContainer>
-                <ArrowRightIcon className='ArrowLfContainer'/>
+              <EventNoteOutlinedIcon className='IconPS'/>
+                <span  className='titlePs'>Events</span>
+                <ChevronRightIcon  className='arrowPs'/>
             </LfContainer>
             <LfContainer selected={lfBg.it12} onClick={(e)=>{
                 setlfBg({
@@ -296,9 +300,9 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Contact'))
                 }}>
-              <PhoneOutlinedIcon/>
-                <InfoLfContainer>Contact</InfoLfContainer>
-                <ArrowRightIcon className='ArrowLfContainer'/>
+              <PhoneOutlinedIcon className='IconPS'/>
+                <span  className='titlePs'>Contact</span>
+                <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
             <LfContainer selected={lfBg.it13} onClick={(e)=>{
                 setlfBg({
@@ -318,13 +322,13 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Notification'))
                 }}>
-              <NotificationsNoneOutlinedIcon/>
-                <InfoLfContainer>Notification</InfoLfContainer>
-                <ArrowRightIcon className='ArrowLfContainer'/>
+              <NotificationsNoneOutlinedIcon className='IconPS'/>
+                <span className='titlePs'>Notification</span>
+                <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
-            <div className='LfImageContainer'>
+            
                 <img src='https://img.freepik.com/free-vector/big-family-meeting_74855-5220.jpg?size=626&ext=jpg' alt=''/>
-            </div>
+         
         </Container>
     )
 }

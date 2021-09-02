@@ -32,42 +32,42 @@ function Events() {
                </div>
                 </WraperHeader>
                 <WraperContent>
-                    <div className='contentInfo'>
-                        <input type='checkbox'/>
-                        <span>Event Id</span>
-                    </div>
-                    <div className='contentInfo'>
+               
+                        <input id='cx' type='checkbox'/>
+                        <span id='ed'>Event Id</span>
+                
+               
                       
-                        <span>Users</span>
-                    </div>
-                    <div className='contentInfo'>
+                        <span id='us'>Users</span>
+                
+               
                       
-                        <span>Owner</span>
-                    </div>
-                    <div className='contentInfo'>
+                        <span id='or'>Owner</span>
+                
+               
                       
-                        <span>Event Name</span>
-                    </div>
-                    <div className='contentInfo'>
+                        <span id='et'>Event Name</span>
+                
+               
                       
-                        <span>Event Date</span>
-                    </div>
-                    <div className='contentInfo'>
+                        <span id='ete'>Event Date</span>
+                
+               
                       
-                        <span>Event Balance</span>
-                    </div>
-                    <div className='contentInfo'>
+                        <span id='el'>Event Balance</span>
+                
+               
                       
-                        <span>Contributers</span>
-                    </div>
-                    <div className='contentInfo'>
+                        <span id='cs'>Contributers</span>
+                
+               
                       
-                        <span>Transactions</span>
-                    </div>
-                    <div className='contentInfo'>
+                        <span id='ts'>Transactions</span>
+                
+               
                       
-                        <span>Created At</span>
-                    </div>
+                        <span id='ct'>Created At</span>
+                
                 </WraperContent>
                 {/* Reuse section */}
                 <EventsReuse id='1242-343' users='5' owner='moataz' event_name='paytabs_lunch'/>

@@ -1,53 +1,81 @@
 import styled from 'styled-components'
 
 export const Container=styled.div`
-flex:0.8;
-margin:20px;
-span{
-    font-weight:600;
-    color:#212A54;
-}
-`
-
-export const TopDashBoardContainer=styled.div`
+.Wraper{
+    margin-top: 30px;
+margin-left: 30px;
 width: 100%;
 
-display: flex;
-flex-direction: column;
-.top{
-    display: flex;
-    justify-content:space-between;
-    margin-top:5px;
 }
-.bottom{
-    display: flex;
-    justify-content:space-between;
-    margin-top:5px;
+width: 1184px;
+span{
+    color:#212A54;
+    font-size: 20px;
+    font-weight:600 ;
 }
+position: relative;
+
+
+#img_txt1{
+position: absolute;
+left:29px;
+top:30px;
+
+
+}
+#img_txt2{
+    position: absolute;
+    left:413px;
+    top:30px;
+}
+#num_txt1{
+    position: absolute;
+    left:797px;
+    top:30px;
+}
+#num_txt2{
+position: absolute;
+left:29px;
+top:153px;
+}
+#num_txt3{
+    position: absolute;
+    left:413px;
+    top:153px;
+}
+#num_txt4{
+    position: absolute;
+    left:797px;
+    top:153px;
+}
+
 `
+
 export const ReuseImgTxtContainer=styled.div`
-background-color: white;
-margin-left:5px;
+background-color: #FFFFFF;
 width:354px;
 height: 103px;
-border-radius: 10px;
-justify-content: flex-start;
-
+border-radius: 20px;
+position: relative;
 .imageContainer{
     display: flex;
-    margin-bottom:3px;
+  position: absolute;
+  left:16px;
+  top:16px;
     img{
-        width: 33px;
-        margin-right: 1px;
+        width: 32px;
+        height: 32px;
         border-radius: 50%;
     }
-    margin-left:5px;
-    margin-top:10px;
+  
 }
 .infoContainer{
+    position: absolute;
+    left:16px;
+    bottom: 16px;
 color: #212A54;
 font-size:16px;
-font-weight:bold;
+font-weight:600;
 margin-left:5px;
 margin-top:20px;
 }
@@ -55,25 +83,28 @@ margin-top:20px;
 `
 export const ReuseNumberTxtContainer=styled.div`
 background-color: white;
-margin-left:5px;
+position: relative;
 width:354px;
 height: 103px;
-border-radius: 10px;
-justify-content: flex-start;
+border-radius: 20px;
+
 
 .NumberContainer{
+    position: absolute;
+    top:16px;
+    left:16px;
     color:#171725;
     font-size:25px;
-    font-weight: bold;
-    margin-left:5px;
-    margin-top:10px;
+    font-weight: 700;
+   
 }
 .TxtContainer{
-    margin-left:5px;
-margin-top:20px;
+    position: absolute;
+   bottom:16px;
+    left:16px;
+    color: #212A54;
 font-size:16px;
-color: #212A54;
-font-weight: bold;
+font-weight:600;
 }
 
 `
@@ -81,48 +112,54 @@ font-weight: bold;
 
 export const BottomContainer=styled.div`
 display: flex;
-justify-content: space-between;
-
-margin-top: 10px;
+position: absolute;
+top:286px;
+left:29px;
 
 `
 
 export const LeftDashBoardContainer=styled.div`
-width: 47%;
+margin-right: 30px;
 .DashBoardTxt{
-    align-items: center;
     display: flex;
-    justify-content:space-between;
-    margin-bottom:10px;
+    justify-content: space-between;
+    align-items: center;
+}
     .InfoTxt{
+       
         font-size:20px;
         color:#212A54;
-        font-weight:bold;
+        font-weight:600;
+        margin-bottom: 20px;
     }
     .SeeMore{
+      
         font-size:12px;
         color:#808191;
+        font-weight: 600;
+        margin-bottom: 20px;
     }
-}
-
 
 `
 
 export const RightDashBoardContainer=styled.div`
-width: 47%;
+
 .DashBoardTxt{
     display: flex;
-    justify-content:space-between;
-    margin-bottom:10px;
+    justify-content: space-between;
     align-items: center;
     .InfoTxt{
+      
         font-size:20px;
         color:#212A54;
-        font-weight:bold;
+        font-weight:600;
+        margin-bottom: 20px;
     }
     .SeeMore{
         font-size:12px;
         color:#808191;
+        font-weight: 600;
+        margin-bottom: 20px;
     }
 }
 
@@ -136,59 +173,170 @@ width: 100%;
 `
 export const UsersDashBoardHeader=styled.div`
 background-color: #212A54;
-color: white;
-display: flex;
-justify-content: space-between;
-align-items: center;
+span{
+   color: #FFFFFF; 
+   font-weight: 600;
+}
+position: relative;
+width: 546px;
+height: 46px;
 border-top-left-radius:10px;
 border-top-right-radius:10px;
-padding: 15px;
+#tit1{
+    position: absolute;
+    top:14px;
+    left:10px;
+    font-size: 14px;
+}
+#tit2{
+    position: absolute;
+    top:14px;
+    left:196px;
+    font-size: 12px;
+}
+#tit3{
+    position: absolute;
+    top:14px;
+    left:321px;
+    font-size: 12px;
+}
+#tit4{
+    position: absolute;
+    top:14px;
+    left:434px;
+    font-size: 12px;
+}
+#rttit1{
+    position: absolute;
+    top:14px;
+    left:10px;
+    font-size: 14px;
+    
+}
+#rttit2{
+    position: absolute;
+    top:14px;
+    left:154px;
+    font-size: 12px;
+}
+#rttit3{
+    position: absolute;
+    top:14px;
+    left:272px;
+    font-size: 12px;
+}
+#rttit4{
+    position: absolute;
+    top:14px;
+    left:349px;
+    font-size: 12px;
+}
+#rttit5{
+    position: absolute;
+    top:14px;
+    left:415px;
+    font-size: 12px;
+}
+
 `
 export const ReuseProfilesPart1=styled.div`
-padding: 15px;
+width: 546px;
+height: 52px;
 background-color: white;
-color: #696974;
-font-size:12px;
-margin-bottom: 1px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-.owner{
-    display: flex;
-    align-items: center;
+span{
+    color: #696974;
+    font-size:12px;
+    font-weight: 400;
+}
+
+position: relative;
+border: 1px solid #F1F1F5;
+
     img{
-        margin-right:5px;
-        width: 33px;
+        width: 32px;
+        height: 32px;
         border-radius:50%;
     }
-}
+
+    #ps_img{
+    position: absolute;
+    top:10px;
+    left:10px;
+    }
+    #ps_owner{
+        position: absolute;
+        top:17px;
+        left:52px;
+    }
+    #ps_wn{
+        position: absolute;
+        top:17px;
+        left:196px;
+    }
+    #ps_ed{
+        position: absolute;
+        top:17px;
+        left:321px;
+    }
+    #ps_co{
+        position: absolute;
+        top:17px;
+        left:434px;
+    }
+
 `
 export const ReuseProfilesPart2=styled.div`
-padding: 15px;
+width: 546px;
+height: 52px;
 background-color: white;
-color: #696974;
-font-size:12px;
-display: flex;
-justify-content: space-between;
-align-items: center;
-margin-bottom: 1px;
-font-size:12px;
-.owner{
-    display: flex;
-    align-items: center;
-    img{
-        margin-right:5px;
-        width: 33px;
-        border-radius:50%;
-    }
+span{
+    color: #696974;
+    font-size:12px;
+    font-weight: 400;
 }
-.transactionto{
-    display: flex;
-    align-items: center;
+
+position: relative;
+border: 1px solid #F1F1F5;
+
     img{
-        margin-right:5px;
-        width: 33px;
+        width: 32px;
+        height: 32px;
         border-radius:50%;
     }
+
+#ps2_img1{
+    position: absolute;
+    top:10px;
+    left:10px;
+}
+#ps2_owner{
+    position: absolute;
+top:17px;
+left:52px;
+}
+#ps2_img2{
+    position: absolute;
+top:10px;
+left:154px;
+}
+#ps2_tit1{
+    position: absolute;
+top:17px;
+left:198px;
+}
+#ps2_tit2{
+    position: absolute;
+top:17px;
+left:272px;
+}
+#ps2_tit3{
+    position: absolute;
+top:17px;
+left:349px;
+}
+#ps2_tit4{
+    position: absolute;
+top:17px;
+left:415px;
 }
 `

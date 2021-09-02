@@ -32,18 +32,18 @@ function Notifications() {
                </div>
                </WraperHeader>
                <WraperContent>
-                <div id='modify'>
-                    <span>Notification ID</span>
-                </div>
-                <div id='modify'>
-                    <span>Notification Text</span>
-                </div>
-                <div id='modify'>
-                    <span>Notification Image</span>
-                </div>
-                <div id='modify'>
-                    <span>Created Time Stamp</span>
-                </div>
+               
+                    <span id='nid'>Notification ID</span>
+                
+               
+                    <span id='nt'>Notification Text</span>
+                
+               
+                    <span id='ni'>Notification Image</span>
+                
+               
+                    <span id='cts'>Created Time Stamp</span>
+                
               
                </WraperContent>
               {/* reuse */}

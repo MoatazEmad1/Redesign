@@ -14,6 +14,21 @@ export const state = {
       }
     ]
   }
+export const state4 = {
+    labels: ['item1', 'item2', 'item3',
+             'item4', 'item5','item6','item7','item8'],
+    datasets: [
+      {
+        label: 'Rainfall',
+        backgroundColor: ['rgba(255,255,192,1)','rgba(255,255,130,1)'],
+        borderColor: '#29DDBB',
+        borderWidth: 2,
+        data: [65, 59, 80, 81, 56,66,40,80],
+        pointRadius:0,
+        lineTension: 0.5,
+      }
+    ]
+  }
   export const state2 = {
     labels: ['item1', 'item2', 'item3',
              'item4', 'item5','item6','item7','item8'],
@@ -44,21 +59,7 @@ export const state = {
       }
     ]
   }
- export const state4 = {
-    labels: ['item1', 'item2', 'item3',
-             'item4', 'item5','item6','item7','item8'],
-    datasets: [
-      {
-        label: 'Rainfall',
-        backgroundColor: ['rgba(255,255,192,1)','rgba(255,255,130,1)'],
-        borderColor: '#29DDBB',
-        borderWidth: 2,
-        data: [65, 30, 20, 90, 34,66,40,80],
-        pointRadius:0,
-        lineTension: 0.5,
-      }
-    ]
-  }
+ 
  export const state5 = {
     labels: ['05', '10', '15',
              '20', '25','30','35','40'],
@@ -232,6 +233,15 @@ export const options3={
               usePointStyle: true,
          
             }
+        },
+       
+    }
+   
+};
+export const options5={
+    plugins:{
+         legend: {
+            display: false,
         },
        
     }

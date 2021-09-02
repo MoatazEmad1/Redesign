@@ -1,8 +1,8 @@
 import React from 'react'
 import {ReuseNumberTxtContainer} from '../../styles/Dashboard.styles'
-function ReuseNumberTxt({Number,txt}) {
+function ReuseNumberTxt({Number,txt,id}) {
     return (
-        <ReuseNumberTxtContainer>
+        <ReuseNumberTxtContainer id={id}>
             <div className='NumberContainer'>
              {Number}
             </div>

@@ -3,46 +3,46 @@ import {TransactionReuseContainer} from '../../styles/Transaction.styles'
 function TransactionReuse({id,type,from,to,amount,msg,cdt}) {
     return (
         <TransactionReuseContainer>
-            <div className='content'> 
-                <input type='checkbox'/>
-                <span>{id}</span>
-            </div>
-            <div className='content'> 
+          
+                <input id='cx' type='checkbox'/>
+                <span id='td'>{id}</span>
+            
+          
               
-                <span>{type}</span>
-            </div>
-            <div className='content'> 
+                <span id='te'>{type}</span>
+            
+          
               
-                <span>{from}</span>
-            </div>
-            <div className='content'> 
+                <span id='fn'>{from}</span>
+            
+          
               
-                <span>{to}</span>
-            </div>
-            <div className='content'> 
+                <span id='tn'>{to}</span>
+            
+          
               
-                <span>N/A</span>
-            </div>
-            <div className='content'> 
+                <span id='tne'>N/A</span>
+            
+          
               
-                <span>N/A</span>
-            </div>
-            <div className='content'> 
+                <span id='tce'>N/A</span>
+            
+          
               
-                <span>{amount}</span>
-            </div>
-            <div className='content'> 
+                <span id='at'>{amount}</span>
+            
+          
               
-                <span>{msg}</span>
-            </div>
-            <div className='content'> 
+                <span id='me'>{msg}</span>
+            
+          
               
-                <span>{cdt}</span>
-            </div>
-            <div className='content'> 
+                <span id='cdt'>{cdt}</span>
+            
+          
               
-                <span>-</span>
-            </div>
+                <span id='ss'>-</span>
+            
         </TransactionReuseContainer>
     )
 }

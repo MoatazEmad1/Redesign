@@ -28,19 +28,19 @@ function Contact() {
                </div>
                </WraperHeader>
                <WraperContent>
-                <span>Title Slug</span>
-                <span>Contact</span>
-                <span>Action</span>
+                <span id='id'>Title Slug</span>
+                <span id='name'>Contact</span>
+                <span id='action'>Action</span>
                 </WraperContent>
                 <WraperInfo>
-                    <span>Terms</span>
-                    <span>-</span>
-                    <button>Edit</button>
+                    <span id='id'>Terms</span>
+                    <span id='name'>-</span>
+                    <button id='action'>Edit</button>
                 </WraperInfo>
                 <WraperInfo>
-                    <span>Privacy</span>
-                    <span>-</span>
-                    <button>Edit</button>
+                    <span id='id'>Privacy</span>
+                    <span id='name'>-</span>
+                    <button id='action'>Edit</button>
                 </WraperInfo>
            </Wraper>
            <Paginate/>

@@ -1,8 +1,8 @@
 import React from 'react'
 import {ReuseImgTxtContainer} from '../../styles/Dashboard.styles'
-function ReuseImgTxt({imgsrc,text}) {
+function ReuseImgTxt({imgsrc,text,id}) {
     return (
-        <ReuseImgTxtContainer>
+        <ReuseImgTxtContainer id={id}>
             <div className='imageContainer'>
                 <img src={imgsrc[0]} alt=''/>
                 <img src={imgsrc[1]} alt=''/>

@@ -1,5 +1,5 @@
 import React from 'react'
-import {Container,TopDashBoardContainer,BottomContainer,LeftDashBoardContainer,RightDashBoardContainer
+import {Container,BottomContainer,LeftDashBoardContainer,RightDashBoardContainer
 ,UsersDashBoardContainer,UsersDashBoardHeader} from '../../styles/Dashboard.styles'
 import ReuseImgTxt from './ReuseImgTxt'
 import ReuseNumberTxt from './ReuseNumberTxt'
@@ -15,20 +15,21 @@ function DashBoard() {
     return (
         <Container>
           {/* Top Section  */}
-            <TopDashBoardContainer>
-                <div className='top'>
-                    <ReuseImgTxt imgsrc={imageArr} text={'Individual user'}/>
-                    <ReuseImgTxt imgsrc={imageArr} text={'Business Users'}/>
-                    <ReuseNumberTxt Number={269} txt={'Payment Transactions'}/>
+
+
+           <div className='Wraper'>
+
+                    <ReuseImgTxt id='img_txt1' imgsrc={imageArr} text={'Individual user'}/>
+                    <ReuseImgTxt  id='img_txt2' imgsrc={imageArr} text={'Business Users'}/>
+                    <ReuseNumberTxt id='num_txt1' Number={269} txt={'Payment Transactions'}/>
+              
+                <ReuseNumberTxt id='num_txt2' Number={15} txt={'Events'}/>
+                <ReuseNumberTxt id='num_txt3' Number={688.43} txt={'Paytabs Commission'}/>
+                <ReuseNumberTxt id='num_txt4' Number={58.52} txt={'Kiwe Commission'}/>
+
+    
+              
                    
-                </div>
-                
-                <div className='bottom'>
-                <ReuseNumberTxt Number={15} txt={'Events'}/>
-                <ReuseNumberTxt Number={688.43} txt={'Paytabs Commission'}/>
-                <ReuseNumberTxt Number={58.52} txt={'Kiwe Commission'}/>
-                </div>
-            </TopDashBoardContainer>
 
 
             {/* Bottom Section */}
@@ -42,10 +43,10 @@ function DashBoard() {
                     <UsersDashBoardContainer>
                         {/* Header */}
                         <UsersDashBoardHeader>
-                            <span>Owner</span>
-                            <span>Wallet Name</span>
-                            <span>Event Date</span>
-                            <span>Created On</span>
+                            <span id='tit1'>Owner</span>
+                            <span id='tit2'>Wallet Name</span>
+                            <span id='tit3'>Event Date</span>
+                            <span id='tit4'>Created On</span>
                         </UsersDashBoardHeader>
                         {/* ReuseDashBoard part 1 */}
                         <ReuseProfilesP1 owner={{imgsrc:image,name:'Edward'}} wn={'Football'} ed={'16 sep 2020'} co={'16 sep 2020'}/>
@@ -68,11 +69,11 @@ function DashBoard() {
                     <UsersDashBoardContainer>
                         {/* Header */}
                         <UsersDashBoardHeader>
-                            <span>Owner</span>
-                            <span>Transaction To</span>
-                            <span>Amount</span>
-                            <span>Message</span>
-                            <span>Created Date Time</span>
+                            <span id='rttit1'>Owner</span>
+                            <span id='rttit2'>Transaction To</span>
+                            <span id='rttit3'>Amount</span>
+                            <span id='rttit4'>Message</span>
+                            <span id='rttit5'>Created Date Time</span>
                         </UsersDashBoardHeader>
                         {/* ReuseDashBoard part 2 */}
                         <ReuseProfilesP2 owner={{imgsrc:image,name:'Edward'}} transactionto={{imgsrc:image,name:'Edward'}} at={'$100'} me={'Hello..'} ct={'16 sep 2020 9:11 PM'}/>
@@ -87,6 +88,8 @@ function DashBoard() {
                 </RightDashBoardContainer>
 
             </BottomContainer>
+           </div>
+            
 
         </Container>
     )

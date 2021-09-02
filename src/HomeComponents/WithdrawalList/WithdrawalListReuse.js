@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {WithdrawalListReuseContainer,Button} from '../../styles/WithdrawalList.styles'
+import {WithdrawalListReuseContainer,Button,Btn} from '../../styles/WithdrawalList.styles'
 import LocalAtmOutlinedIcon from '@material-ui/icons/LocalAtmOutlined';
 import AccountBalanceOutlinedIcon from '@material-ui/icons/AccountBalanceOutlined';
 import ReuseInputPopUp from '../../utils/popup/ReuseInputPopUp'
@@ -14,41 +14,45 @@ function WithdrawalListReuse({id,username,mobile,type}) {
     }
     return (
         <WithdrawalListReuseContainer>
-            <div className='contentInfo'>
-            <input type='checkbox'/>
-            <span>{id}</span>
-            </div>
-            <div className='contentInfo'>
-            <span>{username}</span>
-            </div>
-            <div className='contentInfo'>
-            <span>{mobile}</span>
-            </div>
-            <div className='contentInfo'>
-            <span>{type===1?<AccountBalanceOutlinedIcon onClick={handelUserPopUp} className='bank-icon'/>:<LocalAtmOutlinedIcon className='money-icon'/>}</span>
+           <div className='wlrc'>
+           <input id='cx' type='checkbox'/>
+            <span id='td'>{id}</span>
+          
+           
+            <span id='ue'>{username}</span>
+          
+           
+            <span id='me'>{mobile}</span>
+          
+           
+            <span id='we'>{type===1?<AccountBalanceOutlinedIcon onClick={handelUserPopUp} className='bank-icon'/>:<LocalAtmOutlinedIcon className='money-icon'/>}</span>
 
-            </div>
-            <div className='contentInfo'>
-            <span>3</span>
-            </div>
-            <div className='contentInfo'>
-            <span>3</span>
-            </div>
-            <div className='contentInfo'>
-            <span>100 Euro</span>
-            </div>
-            <div className='contentInfo'>
-            <span>Withdraw Money</span>
-            </div>
-            <div className='contentInfo'>
-                <Button bg='#4ECAA5'>Paid</Button>
-                <Button bg='#FF666A'>Declined</Button>
-            </div>
-            <PopUp ht={40} wd={60} showBlockOrNone={display}>
+          
+           
+            <span id='ts'>3</span>
+          
+           
+            <span id='tne'>3</span>
+          
+           
+            <span id='at'>100 Euro</span>
+          
+           
+            <span id='msg'>Withdraw Money</span>
+          
+           
+                <Button id='paid' bg='#4ECAA5'>Paid</Button>
+                <Button id='dec' bg='#FF666A'>Declined</Button>
+          
+           </div>
+          
+            <PopUp ht='494' wd='700' showBlockOrNone={display}>
                 <div className='popupModel'>
-                    <div className='headerPopUp'>
-                    <span>Motaz Emad G.Bank Account</span>  
-                    <span onClick={handelCloseModel}>X</span>
+                    <div className='headerPopUp BS_Bank'>
+                    <span id='title' className='BS_Bank_Title'>Motaz Emad G.Bank Account</span>  
+                    <div id='closeBtn'>
+                         <span id='close'  onClick={handelCloseModel}>x</span>
+                    </div>
                     </div>
                     <div className='popupModelContent'>
                         <div className='popupModelContentLf'>
@@ -56,13 +60,13 @@ function WithdrawalListReuse({id,username,mobile,type}) {
                             <ReuseInputPopUp label='Bank Name' initialVal='MBE'/>
                             <ReuseInputPopUp label='Bank Account Name' initialVal='19019'/>
                             <ReuseInputPopUp label='Bank Account Number' initialVal='Nbe123'/>
-                            <Button bg='#04B4FF'>Export</Button>
+                            <Btn bg='#04B4FF'>Export</Btn>
                         </div>
                         <div className='popupModelContentRt'>
                         <ReuseInputPopUp label='Bank Adress' initialVal='damanhour'/>
                         <ReuseInputPopUp label='Bank Account Number' initialVal='Nbe123'/>
                         <ReuseInputPopUp label='Swift code' initialVal='Nbe123'/>
-                        <Button bg='#4ECAA5'>Print</Button>
+                        <Btn bg='#4ECAA5'>Print</Btn>
                         </div>
                         
                     </div>

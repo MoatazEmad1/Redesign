@@ -1,10 +1,10 @@
 import React,{useState} from 'react'
-import {AdminContainer,Wraper,WraperHeader,WraperContent,PopUp} from '../../styles/Admin.styles'
+import {AdminContainer,Wraper,WraperHeader,WraperContent} from '../../styles/Admin.styles'
 import SearchIcon from '@material-ui/icons/Search';
 import AdminReuseUsers from './AdminReuseUsers';
 import Paginate from '../../utils/Paginate';
 import ReuseInputPopUp from '../../utils/popup/ReuseInputPopUp'
-
+import { PopUp } from '../../styles/PopUp.styles';
 function Admin() {
     const image='https://www.sketchappsources.com/resources/source-image/profile-illustration-gunaldi-yunus.png'
    
@@ -37,18 +37,50 @@ function Admin() {
                 
                 <div className='btn'>
                <button onClick={handelAddUsers}>Add</button>
-               {/* Pop up Model */}
-               <PopUp showBlockOrNone={display}>
+              
+                </div>
+                </div>
+            </WraperHeader>
+
+            <WraperContent>
+            <span id="user">User Name</span>
+            <span id='email'>Email</span>
+            <span id='ca'>Created At</span>
+            <span id='re'>Role</span>
+            <span id='an'>Action</span>
+            </WraperContent>
+            {/* Reuse section */}
+         
+            < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
+           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
+           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
+           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
+           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
+           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
+           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
+           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
+           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
+           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
+       
+         
+          </Wraper>
+          {/* Pagination */}
+            <Paginate/>
+          {/* Pop up Model */}
+            <PopUp showBlockOrNone={display} wd='540' ht='711'>
                 <div className='popupModel'>
                     <div className='headerPopUp'>
                     <span>Add Contact</span>  
-                    <span onClick={handelCloseModel}>X</span>
+                    <div id='closeBtn'>
+                         <span id='close'  onClick={handelCloseModel}>x</span>
+                    </div>
+                   
                     </div>
                     <div className='popupModelContent'>
                         <div className='popupModelContentLf'>
-                            <div className='popupModelContentLfImage'>
+                           
                                 <img src={image} alt=''/>
-                            </div>
+                           
                             <ReuseInputPopUp label='Department' initialVal='Department'/>
                             <ReuseInputPopUp label='Phone' initialVal='Enter your phone number'/>
                             <ReuseInputPopUp label='Adress' initialVal='Enter your Adress'/>
@@ -64,37 +96,12 @@ function Admin() {
                         
                     </div>
                     <div className='popupModelAddContact'>
-                              <button >Add contact</button>
+                              <span>Add contact</span>
                     </div>
                       
                 </div>
 
                </PopUp>
-                </div>
-                </div>
-            </WraperHeader>
-
-            <WraperContent>
-            <span>User Name</span>
-            <span>Email</span>
-            <span>Created At</span>
-            <span>Role</span>
-            <span>Action</span>
-            </WraperContent>
-            {/* Reuse section */}
-           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
-           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
-           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
-           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
-           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
-           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
-           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
-           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
-           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
-           < AdminReuseUsers username='moataz' email='moataz@kiweapp.com' createdAt='1 oct 2020' role='developer'/>
-          </Wraper>
-          {/* Pagination */}
-            <Paginate/>
         </AdminContainer>
     )
 }

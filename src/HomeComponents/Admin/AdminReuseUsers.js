@@ -9,13 +9,13 @@ function AdminReuseUsers({username,email,createdAt,role}) {
                <span>{username}</span> 
             </div>
 
-            <span>{email}</span>
-            <span>{createdAt}</span>
-            <span>{role}</span>
+            <span id='email'>{email}</span>
+            <span id='ca'>{createdAt}</span>
+            <span id='re'>{role}</span>
 
             <div className='adminBtns'>
-            <Button bg='#639DFF'>Edit</Button>
-            <Button bg='#4ECAA5'>Restore</Button>
+            <Button id='edit' bg='#639DFF'>Edit</Button>
+            <Button  bg='#4ECAA5'>Restore</Button>
             </div>
         </AdminReuse>
     )

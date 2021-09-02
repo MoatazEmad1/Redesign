@@ -6,18 +6,18 @@ function NotificationsReuse({id,text}) {
 
     return (
         <NotificationsReuseContainer>
-            <div id='modify'>
-                <span>{id}</span>
-            </div>
-            <div id='modify'>
-                <span>{text}</span>
-            </div>
-            <div id='modify'>
-               <img src={image} alt=''/>
-            </div>
-            <div id='modify'>
-                <span>16 sep 2020 10AM</span>
-            </div>
+         
+                <span id='nid'>{id}</span>
+         
+         
+                <span id='nt'>{text}</span>
+         
+         
+               <img id='ni' src={image} alt=''/>
+         
+         
+                <span id='cts'>16 sep 2020 10AM</span>
+         
         </NotificationsReuseContainer>
     )
 }

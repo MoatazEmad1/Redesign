@@ -2,30 +2,35 @@ import styled from "styled-components";
 
 
 export const AdminContainer=styled.div`
-margin: 20px;
-flex:0.8;
+margin-top: 30px;
+margin-left: 30px;
+width: 1184px;
 
 span{
     color:#212A54;
     font-size: 20px;
-    font-weight:bold ;
+    font-weight:600 ;
 }
 
 `
 export const WraperHeader=styled.div`
-
 width: 100%;
-display: flex;
-justify-content: space-between;
-.search{
+height: 58px;
+position: relative;
 
+.search{
+position: absolute;
+left: 30px;
+bottom: 0px;
 display: flex;
+
 align-items: center;
 .searchIcon{
     color:#04B4FF;
     border-top-left-radius:10px;
     border-bottom-left-radius:10px;
     border:1px solid #F1F1F5;
+    
 }
 input{
     border-top-right-radius:10px;
@@ -36,7 +41,9 @@ input{
 }
 }
 .sort{
-
+    position: absolute;
+right: 30px;
+bottom: 0px;
 display: flex;
 align-items: center;
 .sortUsers{
@@ -47,10 +54,14 @@ align-items: center;
 span{
     color:#696974;
     font-size:14px;
+    font-weight: 400;
 }
 select{
     border:none;
     outline: none;
+    color: #44444F;
+    font-size: 14px;
+    font-weight: 600;
 }
 .btn{
     margin-left:20px;
@@ -67,131 +78,112 @@ select{
 `
 export const WraperContent=styled.div`
 
-display: flex;
-align-items: center;
-justify-content: space-between;
-border-bottom:2px solid  #F1F1F5;;
+width: 100%;
+height: 58px;
+position: relative;
+
 span{
     color:#212A54;
-    font-weight: bold;
+    font-weight: 700;
     font-size:14px;
 }
+#user{
+position: absolute;
+left:30px;
+top:20px;
+
+}
+#email{
+position: absolute;
+left:282px;
+top:20px;
+}
+#ca{
+position: absolute;
+left:534px;
+top:20px;
+}
+#re{
+position: absolute;
+left:710px;
+top:20px;
+}
+#an{
+position: absolute;
+left:863px;
+top:20px;
+}
+
 `
 export const Wraper=styled.div`
-background-color:white;
 border-radius:10px;
-padding:10px;
-margin-top:20px;
+border:1px solid #F1F1F5;
+background-color: #FFFFFF;
+width:1122px;
+margin-top:30px;
+
 `
 export const AdminReuse=styled.div`
-display: flex;
-justify-content: space-between;
-border-bottom: 2px solid #F1F1F5;
-align-items: center;
+
+border: 1px solid #F1F1F5;
+position: relative;
+height: 58px;
 span{
     font-size: 12px;
     color:#696974;
-    font-weight: bold;
+    font-weight: 600;
 }
 .accesstimeIcon{
     color:#D9D9DE;
+    margin-right: 6.33px;
+    width: 13.33px;
+    height: 13.33px;
+
 }
 .timeToUser{
+    position: absolute;
+    top:20px;
+    left:30px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+#email{
+    position: absolute;
+    top:20px;
+    left:282px;
+}
+#ca{
+    position: absolute;
+    top:20px;
+    left:534px;
+}
+#re{
+    position: absolute;
+    top:20px;
+    left:710px;
+}
 .adminBtns{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 120px;
+    position: absolute;
+    top:10px;
+    left:863px;
+    
+    width: 259px;
    
-margin: 10px;
+#edit{
+    margin-right: 10px;
+}
     
 }
 `
 export const Button=styled.button`
 
 background-color: ${(props)=>props.bg};
-padding:10px;
+padding:7px 20px 7px 20px;
 border:none;
 outline: none;
 color:white;
-border-radius:10px;
-
-`
-
-export const PopUp=styled.div`
-
-position: absolute;
-top:0px;
-left:0px;
-width: 100vw;
-height: 100%;
-background-color: rgba(0,0,0,0.3);
-display: ${(props)=>props.showBlockOrNone};
-.popupModel{
-    .popupModelAddContact{
-       
-            width: 80%;
-            margin:0px auto;
-
-           button{
-               width: 100%;
-               padding:10px;
-               color:white;
-               background-color: #04B4FF;
-               border-radius: 40px;
-           }
-          
-        }
-    position: absolute;
-    top: 50%;  
-    left: 50%; 
-    transform: translate(-50%, -50%); 
-    background-color: white;
-    width: 40%;
-    height: 55%;
-    border-radius: 15px;
-    .headerPopUp{
-        display: flex;
-        width: 80%;
-        margin: 10px auto;
-        justify-content: space-between;
-        align-items: center;
-        cursor: pointer;
-    }
-    .popupModelContent{
-        display: flex;
-     
-        width: 90%;
-        margin: 5px auto;
-        justify-content: space-between;
-        align-items: center;
-       
-        .popupModelContentLf{
-            width:45%;
-            display: flex;
-            flex-direction:column;
-            .popupModelContentLfImage{
-                width: 100%;
-                height: 166px;
-                img{
-                    width: 100%;
-                    border-radius:50%;
-                    object-fit: cover;
-                }
-            }
-        }
-        .popupModelContentRt{
-            width:45%;
-            display: flex;
-            flex-direction:column;
-        }
-    }
-   
-}
+border-radius:8px;
 
 `
 export const AdminReuseInputFieldContainer=styled.div`

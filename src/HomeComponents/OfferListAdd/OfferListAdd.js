@@ -14,9 +14,12 @@ function OfferListAdd() {
                </WraperHeader>
                <WraperContent>
                     <span id='name'>Offer Name</span>
-                    <input id='input-name' placeholder='enter an offer name'/>
+                    <div id='input-name' className='btcontainer'><span>enter an offer name</span></div>
                     <span id='image'>  Offer image</span>
-                    <input id='file' type='file'/>
+                    <div id='file' className='btcontainer'>
+                        <div className='choose'><span>Choose file</span></div>
+                        <div className='filetitle'><span>No file selected</span></div>
+                    </div>
                 </WraperContent>
            </Wraper>
         </OfferListAddContainer>

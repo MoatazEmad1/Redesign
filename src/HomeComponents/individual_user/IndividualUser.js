@@ -29,22 +29,17 @@ function IndividualUser() {
                 </div>
             </WraperHeader>
             <WraperContent>
-              
-              <div className='WraperContentLf'>
-                  <span>Profile Image</span>
-                        <span>First Name</span>
-                        <span>Last Name</span>
-                        <span>Email</span> 
-              </div>
-                       <div className='WraperContentRt'>
-                              <span>Mobile</span>
-                        <span>DOB</span>
-                        <span>Childrens</span>
-                        <span>Events</span>
-                        <span>Transactions</span>
-                        <span>Action</span> 
+                       <span id='pe'>Profile Image</span>
+                        <span id='fs'>First Name</span>
+                        <span id='le'>Last Name</span>
+                        <span id='email'>Email</span> 
+                        <span id='mobile'>Mobile</span>
+                        <span id='dob'>DOB</span>
+                        <span id='childrens'>Childrens</span>
+                        <span id='events'>Events</span>
+                        <span id='ts'>Transactions</span>
+                        <span id='an'>Action</span> 
       
-                       </div>
 
                      
             

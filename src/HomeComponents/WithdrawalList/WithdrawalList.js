@@ -25,8 +25,8 @@ function WithdrawalList() {
                 <SearchIcon className='searchIcon'/>
                 <input type='text' placeholder='Search...'/>
                 </div>
-                <Button bg='#639DFF'>Bank Transfer</Button>
-                <Button bg='#4ECAA5'>Cash Delivery</Button>
+                <Button id='bnkr' bg='#639DFF'>Bank Transfer</Button>
+                <Button id='cd' bg='#4ECAA5'>Cash Delivery</Button>
                 <div className='sort'>
 
               
@@ -43,34 +43,34 @@ function WithdrawalList() {
                </div>
                 </WraperHeader>
                 <WraperContent>
-                    <div className='contentInfo'>
-                    <input type='checkbox'/>
-                    <span>Transaction Id</span>
-                    </div>
-                    <div className='contentInfo'>
-                    <span>User Name</span>
-                    </div>
-                    <div className='contentInfo'>
-                    <span>Mobile</span>
-                    </div>
-                    <div className='contentInfo'>
-                    <span>Withdrawal Type</span>
-                    </div>
-                    <div className='contentInfo'>
-                    <span>Transaction Fees</span>
-                    </div>
-                    <div className='contentInfo'>
-                    <span>Transaction Charge</span>
-                    </div>
-                    <div className='contentInfo'>
-                    <span>Amount</span>
-                    </div>
-                    <div className='contentInfo'>
-                    <span>Message</span>
-                    </div>
-                    <div className='contentInfo'>
-                    <span>Action</span>
-                    </div>
+                  
+                    <input id='cx' type='checkbox'/>
+                    <span id='td'>Transaction Id</span>
+                   
+                  
+                    <span id='ue'>User Name</span>
+                   
+                  
+                    <span id='me'>Mobile</span>
+                   
+                  
+                    <span id='we'>Withdrawal Type</span>
+                   
+                  
+                    <span id='ts'>Transaction Fees</span>
+                   
+                  
+                    <span id='tne'>Transaction Charge</span>
+                   
+                  
+                    <span id='at'>Amount</span>
+                   
+                  
+                    <span id='msg'>Message</span>
+                   
+                  
+                    <span id='an'>Action</span>
+                   
                 </WraperContent>
                 {/* ReuseSection */}
                 <WithdrawalListReuse id='555-21333' username='moataz' mobile='01554477068' type={1}/>
@@ -84,11 +84,13 @@ function WithdrawalList() {
               
                 
            </Wraper>
-           <PopUp ht={70} wd={60} showBlockOrNone={display}>
+           <PopUp ht='700' wd='700' showBlockOrNone={display}>
                 <div className='popupModel'>
-                    <div className='headerPopUp'>
-                    <span>Motaz Emad G.Bank Account</span>  
-                    <span onClick={handelCloseModel}>X</span>
+                    <div className='headerPopUp BS_Bank'>
+                    <span id='title' className='BS_Bank_Title'>Motaz Emad G.Bank Account</span>  
+                    <div id='closeBtn'>
+                         <span id='close'  onClick={handelCloseModel}>x</span>
+                    </div>
                     </div>
                     <div className='popupModelContent'>
                         <div className='popupModelContentLf'>

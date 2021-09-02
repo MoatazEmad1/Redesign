@@ -32,9 +32,9 @@ function OfferList() {
                </div>
                </WraperHeader>
                <WraperContent>
-                <span>Offer Name</span>
-                <span>Offer Image</span>
-                <span>Action</span>
+                <span id='id'>Offer Name</span>
+                <span id='name'>Offer Image</span>
+                <span id='action'>Action</span>
                </WraperContent>
                <OfferListReuse name='security'/>
                <OfferListReuse name='security'/>

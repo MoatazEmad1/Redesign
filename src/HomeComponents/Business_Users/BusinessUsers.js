@@ -31,19 +31,19 @@ function BusinessUsers() {
                </div>
                 </WraperHeader>
                 <WraperContent>
-                <div className='WraperContentLf'>
-                    <span>Profile Image</span>
-                    <span>User Name</span>
-                    <span>Bank</span>
-                    <span>Business Name</span>
-                    <span>Mobile</span>
-                    <span>Email</span>
-                </div>
+               
+                    <span id='pe'>Profile Image</span>
+                    <span id='username'>User Name</span>
+                    <span id='bank'>Bank</span>
+                    <span id='be'>Business Name</span>
+                    <span id='mobile'>Mobile</span>
+                    <span id='email'>Email</span>
+                
 
-                <div className='WraperContentRt'>
-                    <span>Transactions</span>
-                    <span>Actions</span>
-                </div>
+               
+                    <span id='ts'>Transactions</span>
+                    <span id='as'>Actions</span>
+               
 
                 </WraperContent>
                 {/* Reuse section */}

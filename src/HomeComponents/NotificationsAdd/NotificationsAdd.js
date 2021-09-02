@@ -21,7 +21,7 @@ function NotificationsAdd() {
                </div>
                 </WraperHeader>
                 <WraperContent>
-                    <div id='content'>
+                    <div id='content' className='contentTop'>
                         <div id='top'><span>User Type</span></div>
                         <div id='bottom'>
                             <input type='radio' name="user_type"/>
@@ -34,7 +34,7 @@ function NotificationsAdd() {
                             <label>Mobile Number</label>
                         </div>
                     </div>
-                    <div id='content'>
+                    <div id='content' className='contentBottom'>
                         <div id='top'><span>Device Type</span></div>
                         <div id='bottom'>
                             <input type='radio' name="Device_type"/>
@@ -46,34 +46,38 @@ function NotificationsAdd() {
                            
                         </div>
                     </div>
-                    <div id='content'>
+                    <div id='content' className='fsinput' >
                         <div id='top'><span>Phone Number</span></div>
-                        <div id='bottom'>
-                           <input id='textInput' placeholder='enter a phone number'/>
+                        <div id='bottom'  className='btcontainer'>
+                          <span >enter a phone number</span>
                         </div>
                     </div>
-                    <div id='content'>
+                    <div id='content' className='scinput'>
                         <div id='top'><span>Title Text</span></div>
-                        <div id='bottom'>
-                           <input id='textInput' placeholder='enter a title'/>
+                        <div id='bottom'  className='btcontainer'>
+                        <span >enter a title</span>
+                           
                         </div>
                     </div>
-                    <div id='content'>
+                    <div id='content' className='tdinput'>
                         <div id='top'><span>Header Text</span></div>
-                        <div id='bottom'>
-                           <input id='textInput' placeholder='enter a Header'/>
+                        <div id='bottom'  className='btcontainer'>
+                        <span >enter a Header</span>
+                          
                         </div>
                     </div>
-                    <div id='content'>
+                    <div id='content' className='fhinput '>
                         <div id='top'><span>Body Text</span></div>
-                        <div id='bottom'>
-                           <input id='textInput' placeholder='enter a Body'/>
+                        <div id='bottom'  className='btcontainer'>
+                        <span >enter a Body</span>
+                         
                         </div>
                     </div>
-                    <div id='content'>
+                    <div id='content' className='fvinput'>
                         <div id='top'><span>Notification Image</span></div>
-                        <div id='bottom'>
-                           <input id='textInput' type='file' placeholder='enter a Body'/>
+                        <div id='bottom' className='btcontainer'>
+                          <div className='choosefile'><span>Choose File</span></div>
+                          <div className='textfile'><span>No file selected</span></div>
                         </div>
                     </div>
                 </WraperContent>

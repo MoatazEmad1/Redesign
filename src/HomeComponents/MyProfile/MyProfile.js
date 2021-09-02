@@ -19,19 +19,19 @@ function MyProfile() {
               </WraperHeader>
               <WraperContent>
                     <div id='upload'>
-                        <button id='photoAndChange'>Upload Photo</button>
-                        <button id='remove'>Remove</button>
+                        <button id='photoAndChange'><span>Upload Photo</span></button>
+                        <button id='remove'><span>Remove</span></button>
                     </div>
-                    <div id='inputcontainer'>
+                    <div id='inputcontainer' className='fsinput'>
                         <label>Name</label>
                         <input placeholder='admin'/>
                     </div>
-                    <div id='inputcontainer'>
+                    <div id='inputcontainer' className='scinput'>
                         <label>Email</label>
                         <input placeholder='admin@kiweapp.com'/>
                     </div>
                     <div id='btnChange'>
-                            <button id='photoAndChange'>Change Password</button>
+                            <button id='photoAndChange'><span>Change Password</span></button>
                     </div>
                        <div className='language'>
                           <span> Language</span>

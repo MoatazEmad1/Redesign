@@ -7,7 +7,12 @@ import {SetNewHomeState} from '../Redux/Actions/HomeActionCreator'
 import SettingsIcon from '@material-ui/icons/Settings';
 import ExitToAppOutlinedIcon from '@material-ui/icons/ExitToAppOutlined';
 import ArrowRightOutlinedIcon from '@material-ui/icons/ArrowRightOutlined';
+
+import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+
 function NavBar() {
+  const image='https://www.sketchappsources.com/resources/source-image/profile-illustration-gunaldi-yunus.png'
+
   const dispatch=useDispatch()
   const [display,setDispaly]=useState('none')
     return (
@@ -19,17 +24,17 @@ function NavBar() {
           </ImageContainer>
 
           <AdminContainer option={display} >
-            <img src={admin_img} alt='' onClick={()=>{
+            <img src={image} alt='' onClick={()=>{
             dispatch(SetNewHomeState('MyProfile'))
             }}/>
             <div className='adminInfo' >
-            <span className='adminName'>Sajon islam</span>
-            <span className='Admin'>admin</span>
+            <span className='adminName'>Sajon Islam</span>
+            <span className='Admin'>Admin</span>
             </div>
            <UnfoldMoreIcon className='drobdown' onClick={()=>  display==='none'? setDispaly('block'):setDispaly('none')}/>
            <div className='settings'>
-              <div id='opt1'><SettingsIcon/> <span>Profile</span><ArrowRightOutlinedIcon/></div>
-              <div id='opt2'><ExitToAppOutlinedIcon/><span>Logout</span><ArrowRightOutlinedIcon/></div>
+              <div id='opt1'><SettingsIcon id='set'/> <span id='profile'>Profile</span> <ChevronRightIcon id='arr'/> </div>
+              <div id='opt2'><ExitToAppOutlinedIcon id='set'/><span id='profile'>Logout</span><ChevronRightIcon id='arr'/></div>
            </div>
           </AdminContainer>
         </Container>

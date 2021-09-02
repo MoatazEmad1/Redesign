@@ -10,7 +10,7 @@ function Transactions() {
         <TransactionsContainer>
                 <span>Transactions</span>
                 <Wraper>
-                    <WraperHeader>
+        
                     <WraperHeader>
                 <div className='search'>
                 <SearchIcon className='searchIcon'/>
@@ -30,7 +30,7 @@ function Transactions() {
                <button >Export</button>
                </div>
                </div>
-                </WraperHeader>
+             
                
                     </WraperHeader> 
                     <WraperImage>
@@ -41,38 +41,38 @@ function Transactions() {
                 </WraperImage>
 
                 <WraperContent>
-                    <div className='Info'>
-                    <span>Transaction Type</span>
+                   
+                    <span id='te'>Transaction Type</span>
 
-                    </div>
-                    <div className='Info'>
-                    <span>From/To person</span>
+                 
+                   
+                    <span id='fn'>From/To person</span>
 
-                    </div>
-                    <div className='Info'>
-                    <span>Transaction Fee</span>
+                 
+                   
+                    <span id='tne'>Transaction Fee</span>
 
-                    </div>
-                    <div className='Info'>
-                    <span>Transaction Charge</span>
+                 
+                   
+                    <span id='tce'>Transaction Charge</span>
 
-                    </div>
-                    <div className='Info'>
-                    <span>Amount</span>
+                 
+                   
+                    <span id='at'>Amount</span>
 
-                    </div>
-                    <div className='Info'>
-                    <span>Message</span>
+                 
+                   
+                    <span id='msg'>Message</span>
 
-                    </div>
-                    <div className='Info'>
-                    <span>Created Date Time</span>
+                 
+                   
+                    <span id='cdt'>Created Date Time</span>
 
-                    </div>
-                    <div className='Info'>
-                    <span>Status</span>
+                 
+                   
+                    <span id='st'>Status</span>
 
-                    </div>
+                 
                 </WraperContent>
                 <TransactionsReuse moneyIn='Money-In' name='moataz' percent='2%' charge='E2.0' amount='E10' msg='Bags' cdt='16 sep 2020 10AM'/>
                 <TransactionsReuse moneyIn='Money-In' name='moataz' percent='2%' charge='E2.0' amount='E10' msg='Bags' cdt='16 sep 2020 10AM'/>
@@ -81,9 +81,8 @@ function Transactions() {
                 <TransactionsReuse moneyIn='Money-In' name='moataz' percent='2%' charge='E2.0' amount='E10' msg='Bags' cdt='16 sep 2020 10AM'/>
                 <TransactionsReuse moneyIn='Money-In' name='moataz' percent='2%' charge='E2.0' amount='E10' msg='Bags' cdt='16 sep 2020 10AM'/>
                 <TransactionsReuse moneyIn='Money-In' name='moataz' percent='2%' charge='E2.0' amount='E10' msg='Bags' cdt='16 sep 2020 10AM'/>
-                <TransactionsReuse moneyIn='Money-In' name='moataz' percent='2%' charge='E2.0' amount='E10' msg='Bags' cdt='16 sep 2020 10AM'/>
-                <TransactionsReuse moneyIn='Money-In' name='moataz' percent='2%' charge='E2.0' amount='E10' msg='Bags' cdt='16 sep 2020 10AM'/>
-                <TransactionsReuse moneyIn='Money-In' name='moataz' percent='2%' charge='E2.0' amount='E10' msg='Bags' cdt='16 sep 2020 10AM'/>
+              
+
                 </Wraper>
                 <Paginate/>
         </TransactionsContainer>

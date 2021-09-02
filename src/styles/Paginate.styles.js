@@ -3,11 +3,12 @@ import styled from 'styled-components'
 
 export const PaginateContainer=styled.div`
 
+
 .paginationBttns {
   width: 80%;
 
-  margin:50px auto;
-  height: 40px;
+  margin:30px auto;
+  height: 90px;
   list-style: none;
   display: flex;
  align-items: center;
@@ -16,18 +17,21 @@ export const PaginateContainer=styled.div`
 .paginationBttns a {
   padding: 10px;
   margin: 8px;
-  border-radius: 5px;
-  
-  color:black;
+  border-radius: 8px;
+  width: 32px;
+  height: 32px;
+  color:#808191;
+  font-size: 14px;
+  font-weight: 400;
   background-color:rgba(0,0,0,0) ;
   cursor: pointer;
 }
 .paginationBttns a:hover {
-  color: white;
+  color: #FFFFFF;
   background-color: #04B4FF;
 }
 .paginationActive a {
-  color: white;
+  color: #FFFFFF;
   background-color: #04B4FF;
 }
 `

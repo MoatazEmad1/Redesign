@@ -3,33 +3,41 @@ import styled from 'styled-components'
 
 
 export const BusinessUsersContainer=styled.div`
-margin: 20px;
-flex:0.8;
+margin-top: 30px;
+margin-left: 30px;
+width: 1184px;
+height: 696px;
 
 span{
     color:#212A54;
     font-size: 20px;
-    font-weight:bold ;
+    font-weight:600 ;
+ 
 }
 
 
 `
 
 export const Wraper=styled.div`
-
-background-color:white;
 border-radius:10px;
-padding:10px;
-margin-top:20px;
+border:1px solid #F1F1F5;
+background-color: #FFFFFF;
+width:1122px;
+margin-top:30px;
+
 
 `
 export const WraperHeader=styled.div`
-
+width: 100%;
+height: 58px;
+position: relative;
 width: 100%;
 display: flex;
 justify-content: space-between;
 .search{
-
+    position: absolute;
+left: 30px;
+bottom: 0px;
 display: flex;
 align-items: center;
 .searchIcon{
@@ -47,7 +55,9 @@ input{
 }
 }
 .sort{
-
+    position: absolute;
+right: 30px;
+bottom: 0px;
 display: flex;
 align-items: center;
 .sortUsers{
@@ -80,109 +90,172 @@ select{
 
 
 export const WraperContent=styled.div`
-display: flex;
-align-items: center;
-justify-content: space-between;
-border-bottom: 2px solid #F1F1F5;
-padding:10px;
+
+width: 100%;
+height: 58px;
+position: relative;
+
 span{
-    
-font-size: 14px;
+    color:#212A54;
+    font-weight: 700;
+    font-size:14px;
 }
-.WraperContentLf{
-    width:55%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+#pe{
+    position:absolute;
+    left:30px;
+    top:20px;
 }
-.WraperContentRt{
-    width:40%;
-    display: flex;
-    align-items: center;
-   justify-content: flex-end;
-   
-span{
-  margin-left: 20px;
+#username{
+    position:absolute;
+    left:168px;
+    top:20px;
 }
+#bank{
+    position:absolute;
+    left:291px;
+    top:20px;
+}
+#be{
+    position:absolute;
+    left:371px;
+    top:20px;
+}
+#mobile{
+    position:absolute;
+    left:531px;
+    top:20px;
+}
+#email{
+    position:absolute;
+    left:665px;
+    top:20px;
+}
+#ts{
+    position:absolute;
+    left:846px;
+    top:20px;
+}
+#as{
+    position:absolute;
+    left:1028px;
+    top:20px;
 }
 
 
 `
 
 export const BusinessUsersReuseContainer=styled.div`
-display: flex;
-padding:10px;
-align-items: center;
-justify-content: space-between;
-border-bottom: 2px solid #F1F1F5;
+ .burc{
+         position: relative;
+      height: 58px;
+      width: 100%;
+  }
+border: 1px solid #F1F1F5;
+span{
+    font-size: 12px;
+    color:#696974;
+    font-weight: 600;
+}
+
 .bankIcon{
     cursor: pointer;
+    position: absolute;
+    top:20px;
+    left:295px;
 }
-span{
-    
-    font-size: 14px;
-    }
+
 .InfoUser{
+    position: absolute;
+    cursor: pointer;
+    top:10px;
+    left:30px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
     img{
         width:38px;
+        height:38px;
         border-radius: 50%;
         object-fit: cover;
-        margin-left: 2px;
     }
 }
 .accessInfoUser{
     color:#D9D9DE;
+    margin-right: 6.33px;
+    width: 13.33px;
+    height: 13.33px;
 }
-.WraperContentLf{
-    width:66.5%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    
-}
-.WraperContentRt{
-    width:15%;
-    display: flex;
-    align-items: center;
-   justify-content: flex-end;
-}
+
+
 .BtnContainer{
    cursor: pointer;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+   
+    width: 118px;
+    height: 38px;
+    position: absolute;
+    top:10px;
+    left: 846px;
     color:white;
     background-color: #639DFF;
     span{
         color:white;
+        width: 75px;
+        margin-left: 6.75px;
     }
-    padding:5px;
-   border-radius:10px;
+
+   border-radius:8px;
 }
 .BtnContainerActive{
-    margin-left: 20px;
+    position: absolute;
+    top:10px;
+    left: 1027px;
+
+    width: 67px;
+    height: 38px;
+   border-radius:8px;
     color:white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: #4ECAA5;
     span{
         color:white;
     }
     cursor: pointer;
-    padding:5px;
-   border-radius:10px;
+
 }
+#username{
+    position: absolute;
+    top:20px;
+    left:168px;
+}
+
+#be{
+    position: absolute;
+    top:20px;
+    left:371px;
+}
+#mobile{
+    position: absolute;
+    top:20px;
+    left:531px;
+}
+#email{
+    position: absolute;
+    top:20px;
+    left:665px;
+}
+
 `
 
 export const Button=styled.button`
-padding:10px;
-border-radius: 10px;
+border-radius: 38px;
 color:white;
 background-color: ${(props)=>props.bg};
 border:none;
 outline:none;
-margin: 0 10px;
+height: 48px;
 width: 255px;
 `

@@ -13,11 +13,11 @@ function Transaction() {
                 <SearchIcon className='searchIcon'/>
                 <input type='text' placeholder='Search...'/>
                 </div> 
-                <Button bg='#29DDBB'>Add</Button>
-                <Button bg='#0C9AFE'>Send</Button>
-                <Button bg='#FEE877'>Pay</Button>
-                <Button bg='#FD6A70'>Request</Button>
-                <Button bg='#212A54'>All</Button>
+                <Button id='add' bg='#29DDBB'>Add</Button>
+                <Button id='send' bg='#0C9AFE'>Send</Button>
+                <Button id='pay' bg='#FEE877'>Pay</Button>
+                <Button id='req' bg='#FD6A70'>Request</Button>
+                <Button id='all' bg='#212A54'>All</Button>
                 <div className='sort'>
 
                
@@ -35,37 +35,37 @@ function Transaction() {
                </div>
                 </WraperHeader>
                 <WraperContent>
-                    <div className='content'>
-                        <input type='checkbox'/>
-                        <span>Transaction Id</span>
-                    </div>
-                    <div className='content'>
-                        <span>Transaction Type</span>
-                    </div>
-                    <div className='content'>
-                        <span>From Person</span>
-                    </div>
-                    <div className='content'>
-                        <span>To person</span>
-                    </div>
-                    <div className='content'>
-                        <span>Transaction Fee</span>
-                    </div>
-                    <div className='content'>
-                        <span>Transaction Charge</span>
-                    </div>
-                    <div className='content'>
-                        <span>Amount</span>
-                    </div>
-                    <div className='content'>
-                        <span>Message</span>
-                    </div>
-                    <div className='content'>
-                        <span>Created date time</span>
-                    </div>
-                    <div className='content'>
-                        <span>Status</span>
-                    </div>
+                   
+                        <input id='cx' type='checkbox'/>
+                        <span id='td'>Transaction Id</span>
+                  
+                  
+                        <span id='te'>Transaction Type</span>
+                 
+                  
+                        <span id='fn'>From Person</span>
+                 
+                
+                        <span id='tn'>To person</span>
+                
+                
+                        <span id='tne'>Transaction Fee</span>
+                   
+                  
+                        <span id='tce'>Transaction Charge</span>
+                
+                  
+                        <span id='at'>Amount</span>
+             
+                   
+                        <span id='me'>Message</span>
+           
+                   
+                        <span id='cdt'>Created date time</span>
+               
+                 
+                        <span id='ss'>Status</span>
+               
                    
                 </WraperContent>
                 {/* Reuse Wraper Information */}
