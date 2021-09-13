@@ -1,7 +1,7 @@
 import {SETNEWHOMESTATE} from '../Actions/HomeActionCreator'
 
 const InitialState={
-    HomeState:'Dashboard'
+    HomeState:'LogIn'
 }
 
 export const HomeReducer=(state=InitialState,action)=>{

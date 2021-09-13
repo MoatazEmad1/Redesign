@@ -5,6 +5,7 @@ import ReuseImgTxt from './ReuseImgTxt'
 import ReuseNumberTxt from './ReuseNumberTxt'
 import ReuseProfilesP1 from './ReuseProfilesP1'
 import ReuseProfilesP2 from './ReuseProfilesP2'
+import Paginate from '../../utils/Paginate'
 function DashBoard() {
     const image='https://www.sketchappsources.com/resources/source-image/profile-illustration-gunaldi-yunus.png'
     const imageArr=['https://www.sketchappsources.com/resources/source-image/profile-illustration-gunaldi-yunus.png',
@@ -19,8 +20,9 @@ function DashBoard() {
 
            <div className='Wraper'>
 
-                    <ReuseImgTxt id='img_txt1' imgsrc={imageArr} text={'Individual user'}/>
-                    <ReuseImgTxt  id='img_txt2' imgsrc={imageArr} text={'Business Users'}/>
+                
+                    <ReuseNumberTxt id='img_txt1' Number={100000} txt={'Individual user'}/>
+                    <ReuseNumberTxt id='img_txt2' Number={4921} txt={'Business Users'}/>
                     <ReuseNumberTxt id='num_txt1' Number={269} txt={'Payment Transactions'}/>
               
                 <ReuseNumberTxt id='num_txt2' Number={15} txt={'Events'}/>
@@ -58,7 +60,7 @@ function DashBoard() {
                         <ReuseProfilesP1 owner={{imgsrc:image,name:'Edward'}} wn={'Football'} ed={'16 sep 2020'} co={'16 sep 2020'}/>
                         <ReuseProfilesP1 owner={{imgsrc:image,name:'Edward'}} wn={'Football'} ed={'16 sep 2020'} co={'16 sep 2020'}/>
                     </UsersDashBoardContainer>
-
+                <Paginate/>
                 </LeftDashBoardContainer>
 
                 <RightDashBoardContainer>
@@ -85,6 +87,7 @@ function DashBoard() {
                         <ReuseProfilesP2 owner={{imgsrc:image,name:'Edward'}} transactionto={{imgsrc:image,name:'Edward'}} at={'$100'} me={'Hello..'} ct={'16 sep 2020 9:11 PM'}/>
                         <ReuseProfilesP2 owner={{imgsrc:image,name:'Edward'}} transactionto={{imgsrc:image,name:'Edward'}} at={'$100'} me={'Hello..'} ct={'16 sep 2020 9:11 PM'}/>
                     </UsersDashBoardContainer>
+                    <Paginate/>
                 </RightDashBoardContainer>
 
             </BottomContainer>

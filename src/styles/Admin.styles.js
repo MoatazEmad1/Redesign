@@ -19,25 +19,31 @@ height: 58px;
 position: relative;
 
 .search{
-position: absolute;
-left: 30px;
-bottom: 0px;
-display: flex;
-
-align-items: center;
-.searchIcon{
-    color:#04B4FF;
-    border-top-left-radius:10px;
-    border-bottom-left-radius:10px;
+    width: 314px;
+    height: 34px;
+    border-radius: 10px;
     border:1px solid #F1F1F5;
-    
+    position: absolute;
+    left: 30px;
+    bottom: 0px;
+    display: flex;
+    align-items: center;
+
+.searchIcon{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 34px;
+  width: 38px;
+  border-right: 1px solid #F1F1F5;
 }
 input{
-    border-top-right-radius:10px;
-    border-bottom-right-radius:10px;
-    border:1px solid #F1F1F5;
-    padding: 4px;
+    
+    border:none;
     outline: none;
+    width: 250px;
+   padding-left: 20px;
+    height: 30px;
 }
 }
 .sort{
@@ -49,19 +55,39 @@ align-items: center;
 .sortUsers{
     border:1px solid  #F1F1F5;
     border-radius: 10px;
-    padding:5px;
+    width: 200px;
+    height: 38px;
+    position: relative;
 }
 span{
     color:#696974;
     font-size:14px;
     font-weight: 400;
 }
-select{
-    border:none;
-    outline: none;
+.sortby{
+    position: absolute;
+    top:10px;
+    left:12px;
+}
+.default{
+    position: absolute;
+    top:10px;
+    left:64px;
     color: #44444F;
-    font-size: 14px;
-    font-weight: 600;
+}
+
+.downarrowContainer{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   height: 38px;
+   width: 28px;
+
+   border-left: 1px solid #F1F1F5;
+   color: #04B4FF;
 }
 .btn{
     margin-left:20px;

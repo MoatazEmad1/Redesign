@@ -3,6 +3,9 @@ import {TransactionContainer,Wraper,WraperHeader,Button,WraperContent} from '../
 import SearchIcon from '@material-ui/icons/Search';
 import TransactionReuse from './TransactionReuse'
 import Paginate from '../../utils/Paginate';
+import search from '../../images/Iconly/Search.png'
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+
 function Transaction() {
     return (
         <TransactionContainer>
@@ -10,9 +13,12 @@ function Transaction() {
             <Wraper>
                 <WraperHeader>
                 <div className='search'>
-                <SearchIcon className='searchIcon'/>
+                    <div className='searchIcon' >
+                        <img src={search} alt=''/>
+                    </div>
+               
                 <input type='text' placeholder='Search...'/>
-                </div> 
+                </div>
                 <Button id='add' bg='#29DDBB'>Add</Button>
                 <Button id='send' bg='#0C9AFE'>Send</Button>
                 <Button id='pay' bg='#FEE877'>Pay</Button>
@@ -21,12 +27,13 @@ function Transaction() {
                 <div className='sort'>
 
                
-              
                 <div className='sortUsers'> 
-                 <span>Sort By:</span>
-                    <select>
-                    <option value="Default">Default</option>
-                    </select>
+                 <span className='sortby'>Sort By:</span>
+                 <span className='default'>Default</span>
+                 <div className='downarrowContainer'>
+                    <ArrowDropDownIcon/>
+                 </div>
+                  
                 </div>
                
                 <div className='btn'>

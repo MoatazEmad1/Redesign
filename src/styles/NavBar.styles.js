@@ -9,6 +9,7 @@ align-items: center;
 background-color: white;
 height: 70px;
 position: relative;
+border-bottom: 1px solid #F3F4F6;
 `
 
 export const ImageContainer=styled.div`
@@ -18,23 +19,28 @@ height: 70px;
 left: 0px;
 top: 0px;
 position: absolute;
-border:1px solid #F3F4F6;
+border-right: 1px solid #F3F4F6;
+
+z-index: 999;
 display: flex;
 align-items: center;
 img{
     position: absolute;
-    width:38px;
-    top:16px;
+    width:55px;
+    height:55px;
+    top:10px;
     left:75px;
 }
 span{
     position: absolute;
     top:19px;
-    right:74px;
+    right:70px;
    font-size:24px;
    color:#212A54;
    font-weight: 700;
-   margin-left: 10px;
+
+   width: 59px;
+   height: 32px;
 }
 
 `
@@ -94,9 +100,9 @@ border:1px solid #F3F4F6;
 #opt1{
     position: relative;
     width:256px;
-  
+    background-color: white;
     height: 70px;
-   background-color: white;
+   color: #212A54;
  #set{
      position: absolute;
      top:25px;
@@ -113,10 +119,13 @@ border:1px solid #F3F4F6;
      left:202px;
  }
  span{
-     color: #212A54;
      font-size: 14px;
      font-weight: 600;
  }
+}
+#opt1:hover{
+    background-color: #04B4FF;
+    color:  white;
 }
 #opt2{
     position: relative;
@@ -140,13 +149,16 @@ border:1px solid #F3F4F6;
      left:202px;
  }
  span{
-     color: white;
      font-size: 14px;
      font-weight: 600;
  }
    
-   background-color: #04B4FF;
-color: white;
+ background-color: white;
+   color: #212A54;
   
+}
+#opt2:hover{
+    background-color: #04B4FF;
+    color:  white;
 }
 `

@@ -12,7 +12,6 @@ import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 
 function NavBar() {
   const image='https://www.sketchappsources.com/resources/source-image/profile-illustration-gunaldi-yunus.png'
-
   const dispatch=useDispatch()
   const [display,setDispaly]=useState('none')
     return (
@@ -23,7 +22,7 @@ function NavBar() {
 
           </ImageContainer>
 
-          <AdminContainer option={display} >
+          <AdminContainer  option={display} >
             <img src={image} alt='' onClick={()=>{
             dispatch(SetNewHomeState('MyProfile'))
             }}/>
@@ -33,8 +32,11 @@ function NavBar() {
             </div>
            <UnfoldMoreIcon className='drobdown' onClick={()=>  display==='none'? setDispaly('block'):setDispaly('none')}/>
            <div className='settings'>
-              <div id='opt1'><SettingsIcon id='set'/> <span id='profile'>Profile</span> <ChevronRightIcon id='arr'/> </div>
-              <div id='opt2'><ExitToAppOutlinedIcon id='set'/><span id='profile'>Logout</span><ChevronRightIcon id='arr'/></div>
+              <div id='opt1' onClick={()=>{
+            }}><SettingsIcon id='set'/> <span id='profile'>Profile</span> <ChevronRightIcon id='arr'/> </div>
+              <div id='opt2' onClick={()=>{
+                dispatch(SetNewHomeState('LogIn'))
+            }}><ExitToAppOutlinedIcon id='set'/><span id='profile'>Logout</span><ChevronRightIcon id='arr'/></div>
            </div>
           </AdminContainer>
         </Container>

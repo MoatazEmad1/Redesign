@@ -5,6 +5,8 @@ import OfferListReuse from './OfferListReuse'
 import Paginate from '../../utils/Paginate';
 import {useDispatch} from 'react-redux'
 import {SetNewHomeState} from '../../Redux/Actions/HomeActionCreator'
+import search from '../../images/Iconly/Search.png'
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 function OfferList() {
     const dispatch=useDispatch()
     return (
@@ -13,19 +15,24 @@ function OfferList() {
            <Wraper>
                <WraperHeader>
                <div className='search'>
-                <SearchIcon className='searchIcon'/>
+                    <div className='searchIcon' >
+                        <img src={search} alt=''/>
+                    </div>
+               
                 <input type='text' placeholder='Search...'/>
                 </div>
                 <div className='sort'>
 
               
                 <div className='sortUsers'> 
-                 <span>Sort By:</span>
-                    <select>
-                    <option value="Default">Default</option>
-                    </select>
+                 <span className='sortby'>Sort By:</span>
+                 <span className='default'>Default</span>
+                 <div className='downarrowContainer'>
+                    <ArrowDropDownIcon/>
+                 </div>
+                  
                 </div>
-               
+                
                 <div className='btn'>
                <button onClick={()=>dispatch(SetNewHomeState('OfferListAdd'))}>Add</button>
                </div>

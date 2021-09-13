@@ -3,6 +3,8 @@ import {TransactionsContainer,Wraper,WraperHeader,WraperImage,WraperContent} fro
 import SearchIcon from '@material-ui/icons/Search';
 import TransactionsReuse from './TransactionsReuse'
 import Paginate from '../../utils/Paginate';
+import search from '../../images/Iconly/Search.png'
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 function Transactions() {
     const image='https://www.sketchappsources.com/resources/source-image/profile-illustration-gunaldi-yunus.png'
 
@@ -12,18 +14,23 @@ function Transactions() {
                 <Wraper>
         
                     <WraperHeader>
-                <div className='search'>
-                <SearchIcon className='searchIcon'/>
+                    <div className='search'>
+                    <div className='searchIcon' >
+                        <img src={search} alt=''/>
+                    </div>
+               
                 <input type='text' placeholder='Search...'/>
                 </div>
                 <div className='sort'>
 
               
                 <div className='sortUsers'> 
-                 <span>Sort By:</span>
-                    <select>
-                    <option value="Default">Default</option>
-                    </select>
+                 <span className='sortby'>Sort By:</span>
+                 <span className='default'>Default</span>
+                 <div className='downarrowContainer'>
+                    <ArrowDropDownIcon/>
+                 </div>
+                  
                 </div>
                
                 <div className='btn'>

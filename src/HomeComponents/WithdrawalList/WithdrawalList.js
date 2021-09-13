@@ -5,6 +5,9 @@ import WithdrawalListReuse from './WithdrawalListReuse'
 import Paginate from '../../utils/Paginate'
 import ReuseInputPopUp from '../../utils/popup/ReuseInputPopUp'
 import { PopUp} from '../../styles/PopUp.styles';
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import search from '../../images/Iconly/Search.png'
+
 function WithdrawalList() {
     const [display,setDispaly]=useState('none')
     const handelUserPopUp=(e)=>{
@@ -22,7 +25,10 @@ function WithdrawalList() {
            <Wraper>
                <WraperHeader>
                <div className='search'>
-                <SearchIcon className='searchIcon'/>
+                    <div className='searchIcon' >
+                        <img src={search} alt=''/>
+                    </div>
+               
                 <input type='text' placeholder='Search...'/>
                 </div>
                 <Button id='bnkr' bg='#639DFF'>Bank Transfer</Button>
@@ -31,10 +37,12 @@ function WithdrawalList() {
 
               
                 <div className='sortUsers'> 
-                 <span>Sort By:</span>
-                    <select>
-                    <option value="Default">Default</option>
-                    </select>
+                 <span className='sortby'>Sort By:</span>
+                 <span className='default'>Default</span>
+                 <div className='downarrowContainer'>
+                    <ArrowDropDownIcon/>
+                 </div>
+                  
                 </div>
                
                 <div className='btn'>

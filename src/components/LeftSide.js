@@ -1,6 +1,5 @@
 import React,{useState} from 'react'
 import {Container,LfContainer} from '../styles/LeftSide.styles'
-import ArrowRightIcon from '@material-ui/icons/ArrowRight';
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 import PeopleAltOutlinedIcon from '@material-ui/icons/PeopleAltOutlined';
 import LocalMallOutlinedIcon from '@material-ui/icons/LocalMallOutlined';
@@ -16,7 +15,61 @@ import {useDispatch} from 'react-redux'
 import {SetNewHomeState} from '../Redux/Actions/HomeActionCreator'
 import InsertChartOutlinedIcon from '@material-ui/icons/InsertChartOutlined';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import path from '../images/Button/Path.png'
+import Ellipse from '../images/Button/Ellipse.png'
+import wave from '../images/Button/wave.png'
+import pathColor from '../images/Button/PathColor.png'
+import EllipseColor from '../images/Button/EllipseColor.png'
+import waveColor from '../images/Button/waveColor.png'
+import Vector from '../images/Iconly/Light outline/Vector.png'
+import VectorWhite from '../images/Iconly/Light outline/VectorWhite.png'
+import Admin from '../images/Iconly/Light outline/Admin.png'
+import AdminWhite from '../images/Iconly/Light outline/AdminWhite.png'
+import People from '../images/Iconly/Light outline/People.png'
+import PeopleWhite from '../images/Iconly/Light outline/PeopleWhite.png'
+import BusinessUser from '../images/Iconly/Light outline/BusinessUser.png'
+import BusinessUserWhite from '../images/Iconly/Light outline/BusinessUserWhite.png'
+import WithDrawalType from '../images/Iconly/Light outline/WithDrawalType.png'
+import WithDrawalTypeWhite from '../images/Iconly/Light outline/WithDrawalTypeWhite.png'
+import WithDrawalList from '../images/Iconly/Light outline/WithDrawalList.png'
+import WithDrawalListWhite from '../images/Iconly/Light outline/WithDrawalListWhite.png'
+import Transactions from '../images/Iconly/Light outline/Transactions.png'
+import TransactionsWhite from '../images/Iconly/Light outline/TransactionsWhite.png'
+import TransactionsFees from '../images/Iconly/Light outline/Transactions.png'
+import TransactionsFeesWhite from '../images/Iconly/Light outline/TransactionsWhite.png'
+import OfferList from '../images/Iconly/Light outline/OfferList.png'
+import OfferListWhite from '../images/Iconly/Light outline/OfferListWhite.png'
+import Events from '../images/Iconly/Light outline/Events.png'
+import EventsWhite from '../images/Iconly/Light outline/EventsWhite.png'
+import Contact from '../images/Iconly/Light outline/Contact.png'
+import ContactWhite from '../images/Iconly/Light outline/ContactWhite.png'
+import Notifications from '../images/Iconly/Light outline/Notifications.png'
+import NotificationsWhite from '../images/Iconly/Light outline/NotificationsWhite.png'
 function LeftSide() {
+    const showIcon=()=>{
+        if(lfBg.it1){
+            return(
+                <div className='IconPS'>
+                <div className='iconpsContainer'>
+                    <img className='parentImg' src={path} alt=''/>
+                    <img className='centerImg' src={wave} alt=''/>
+                    <img className='topRightImg' src={Ellipse} alt=''/>
+                </div>
+                </div>
+            )
+        }
+        else{
+            return(
+                <div className='IconPS'>
+                <div className='iconpsContainer'>
+                    <img className='parentImg' src={pathColor} alt=''/>
+                    <img className='centerImg' src={waveColor} alt=''/>
+                    <img className='topRightImg' src={EllipseColor} alt=''/>
+                </div>
+                </div>
+            )
+        }
+    }
     const dispatch=useDispatch()
     const [lfBg,setlfBg]=useState({
         it1:true,
@@ -36,7 +89,7 @@ function LeftSide() {
    console.log(lfBg.it1)
     return (
         <Container>
-            <LfContainer selected={lfBg.it1}  onClick={(e)=>{
+            <LfContainer selected={lfBg.it1}   onClick={(e)=>{
                 setlfBg({
                     it1:true,
                     it2:false,
@@ -54,8 +107,9 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Dashboard'))
                 }}>
-         
-                <DashboardOutlinedIcon className='IconPS'/>
+                    {showIcon()}
+               
+             
                 <span className='titlePs'>Dashboard</span>
 
           
@@ -80,11 +134,16 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Insights'))
                 }}>
-              <InsertChartOutlinedIcon className='IconPS'/>
+               <div className='IconPS'>
+                    <div className='iconpsContainer'>
+                        {lfBg.it2?<img className='parentImg' src={VectorWhite} alt=''/>:<img className='parentImg' src={Vector} alt=''/>}
+                    </div>
+                </div>
+              
                 <span className='titlePs'>Insights</span>
                 <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
-            <LfContainer selected={lfBg.it3} onClick={(e)=>{
+            <LfContainer wdIcon={16} htIcon={20} selected={lfBg.it3} onClick={(e)=>{
                 setlfBg({
                     it1:false,
                     it2:false,
@@ -102,7 +161,11 @@ function LeftSide() {
                 })
                dispatch(SetNewHomeState('Admin'))
                 }}>
-              <PersonOutlineOutlinedIcon className='IconPS'/>
+                <div className='IconPS'>
+                    <div className='iconpsContainer'>
+                        {lfBg.it3?<img className='parentImg' src={AdminWhite} alt=''/>:<img className='parentImg' src={Admin} alt=''/>}
+                    </div>
+                </div>
                 <span className='titlePs'>Admin</span>
                 <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
@@ -124,7 +187,11 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Individual user'))
                 }}>
-              <PeopleAltOutlinedIcon  className='IconPS'/>
+               <div className='IconPS'>
+                    <div className='iconpsContainer'>
+                        {lfBg.it4?<img className='parentImg' src={PeopleWhite} alt=''/>:<img className='parentImg' src={People} alt=''/>}
+                    </div>
+                </div>
                 <span className='titlePs'>Individual user</span>
                 <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
@@ -146,7 +213,11 @@ function LeftSide() {
                 })
                dispatch(SetNewHomeState('Business user'))
                 }}>
-              <LocalMallOutlinedIcon className='IconPS'/>
+             <div className='IconPS'>
+                    <div className='iconpsContainer'>
+                        {lfBg.it5?<img className='parentImg' src={BusinessUserWhite} alt=''/>:<img className='parentImg' src={BusinessUser} alt=''/>}
+                    </div>
+                </div>
                 <span className='titlePs'>Business user</span>
                 <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
@@ -168,7 +239,12 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Transaction'))
                 }}>
-              <ImportExportOutlinedIcon className='IconPS'/>
+                       <div className='IconPS'>
+                    <div className='iconpsContainer'>
+                        {lfBg.it6?<img className='parentImg' src={TransactionsWhite} alt=''/>:<img className='parentImg' src={Transactions} alt=''/>}
+                    </div>
+                </div>
+
                 <span className='titlePs'>Transaction</span>
                 <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
@@ -190,11 +266,15 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Transaction Fees'))
                 }}>
-              <ImportExportOutlinedIcon className='IconPS'/>
+               <div className='IconPS'>
+                    <div className='iconpsContainer'>
+                        {lfBg.it7?<img className='parentImg' src={TransactionsFeesWhite} alt=''/>:<img className='parentImg' src={TransactionsFees} alt=''/>}
+                    </div>
+                </div>
                 <span className='titlePs'>Transaction Fees</span>
                 <ChevronRightIcon  className='arrowPs'/>
             </LfContainer>
-            <LfContainer selected={lfBg.it8} onClick={(e)=>{
+            <LfContainer wdIcon={17.05} htIcon={19.86} selected={lfBg.it8} onClick={(e)=>{
                 setlfBg({
                     it1:false,
                     it2:false,
@@ -212,11 +292,15 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Withdrawal list'))
                 }}>
-              <DescriptionOutlinedIcon className='IconPS'/>
+              <div className='IconPS'>
+                    <div className='iconpsContainer'>
+                        {lfBg.it8?<img className='parentImg' src={WithDrawalListWhite} alt=''/>:<img className='parentImg' src={WithDrawalList} alt=''/>}
+                    </div>
+                </div>
                 <span  className='titlePs'>Withdrawal list</span>
                 <ChevronRightIcon  className='arrowPs'/>
             </LfContainer>
-            <LfContainer selected={lfBg.it9} onClick={(e)=>{
+            <LfContainer selected={lfBg.it9} wdIcon={18} htIcon={20} onClick={(e)=>{
                 setlfBg({
                     it1:false,
                     it2:false,
@@ -234,7 +318,11 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Withdrawal type'))
                 }}>
-              <AssignmentOutlinedIcon className='IconPS'/>
+             <div className='IconPS'>
+                    <div className='iconpsContainer'>
+                        {lfBg.it9?<img className='parentImg' src={WithDrawalTypeWhite} alt=''/>:<img className='parentImg' src={WithDrawalType} alt=''/>}
+                    </div>
+                </div>
                 <span className='titlePs'>Withdrawal type</span>
                 <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
@@ -256,11 +344,15 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Offer list'))
                 }}>
-              <LocalOfferOutlinedIcon className='IconPS'/>
+              <div className='IconPS'>
+                    <div className='iconpsContainer'>
+                        {lfBg.it10?<img className='parentImg' src={OfferListWhite} alt=''/>:<img className='parentImg' src={OfferList} alt=''/>}
+                    </div>
+                </div>
                 <span className='titlePs'>Offer list</span>
                 <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
-            <LfContainer selected={lfBg.it11} onClick={(e)=>{
+            <LfContainer wdIcon={18} htIcon={20} selected={lfBg.it11} onClick={(e)=>{
                 setlfBg({
                     it1:false,
                     it2:false,
@@ -278,7 +370,11 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Events'))
                 }}>
-              <EventNoteOutlinedIcon className='IconPS'/>
+          <div className='IconPS'>
+                    <div className='iconpsContainer'>
+                        {lfBg.it11?<img className='parentImg' src={EventsWhite} alt=''/>:<img className='parentImg' src={Events} alt=''/>}
+                    </div>
+                </div>
                 <span  className='titlePs'>Events</span>
                 <ChevronRightIcon  className='arrowPs'/>
             </LfContainer>
@@ -300,11 +396,15 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Contact'))
                 }}>
-              <PhoneOutlinedIcon className='IconPS'/>
+               <div className='IconPS'>
+                    <div className='iconpsContainer'>
+                        {lfBg.it12?<img className='parentImg' src={ContactWhite} alt=''/>:<img className='parentImg' src={Contact} alt=''/>}
+                    </div>
+                </div>
                 <span  className='titlePs'>Contact</span>
                 <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
-            <LfContainer selected={lfBg.it13} onClick={(e)=>{
+            <LfContainer wdIcon={17} htIcon={20} selected={lfBg.it13} onClick={(e)=>{
                 setlfBg({
                     it1:false,
                     it2:false,
@@ -322,7 +422,11 @@ function LeftSide() {
                 })
                 dispatch(SetNewHomeState('Notification'))
                 }}>
-              <NotificationsNoneOutlinedIcon className='IconPS'/>
+             <div className='IconPS'>
+                    <div className='iconpsContainer'>
+                        {lfBg.it13?<img className='parentImg' src={NotificationsWhite} alt=''/>:<img className='parentImg' src={Notifications} alt=''/>}
+                    </div>
+                </div>
                 <span className='titlePs'>Notification</span>
                 <ChevronRightIcon className='arrowPs'/>
             </LfContainer>

@@ -1,4 +1,5 @@
 import React from 'react'
+import AdminWhite from '../../images/Iconly/Light outline/AdminWhite.png'
 import {EventsReuseContainer,Button} from '../../styles/Events.styles'
 import PersonOutlineOutlinedIcon from '@material-ui/icons/PersonOutlineOutlined';
 function EventsReuse({id,users,owner,event_name}) {
@@ -24,11 +25,11 @@ function EventsReuse({id,users,owner,event_name}) {
             <span id='el'>100 euro</span>
             
             <div id='cs' className='info1'>
-                <PersonOutlineOutlinedIcon/>
+               <img src={AdminWhite} alt=''/>
             <span >contributers</span>
             </div>
             <div id='ts' className='info2'>
-                <PersonOutlineOutlinedIcon/>
+               <img src={AdminWhite} alt=''/>
             <span >transactions</span>
             </div>
          

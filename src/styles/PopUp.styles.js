@@ -24,7 +24,7 @@ z-index: 999;
 left:0px;
 width: 1440px;
 height: 1040px;
-background-color: rgba(0,0,0,0.3);
+background-color: rgba(0,0,0,0.2);
 display: ${(props)=>props.showBlockOrNone};
 .popupModel{
   

@@ -97,24 +97,26 @@ export  const state6 = {
     ]
 }
 export  const state7 = {
-    labels: ['jan', 'feb', 'mar',
-             'apr','may','jun'],
+    labels: ['Jan', 'Feb', 'Mar',
+             'Apr','May','Jun'],
     datasets: [
       {
         label: 'Rainfall1',
         backgroundColor: ['#12B886'],
         borderColor: '#639DFF',
         borderWidth: 0,
-        data: [10, 20, 30, 40],
+        maxBarThickness: 7,
+        data: [10, 20, 30, 40,50,60],
         barThickness:10,
         borderRadius:10,
       },
       {
         label: 'Rainfall2',
+        maxBarThickness: 7,
         backgroundColor: ['#0561FC'],
         borderColor: '#639DFF',
         borderWidth: 0,
-        data: [5, 10, 20, 30],
+        data: [5, 10, 20, 30,40,50],
         barThickness:10,
         borderRadius:10,
       },

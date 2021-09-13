@@ -8,6 +8,9 @@ import ReuseInputPopUp from '../../utils/popup/ReuseInputPopUp'
 import { PopUp} from '../../styles/PopUp.styles';
 import {useDispatch} from 'react-redux'
 import {SetNewHomeState} from '../../Redux/Actions/HomeActionCreator'
+import AdminWhite from '../../images/Iconly/Light outline/AdminWhite.png'
+import EventsWhite from '../../images/Iconly/Light outline/EventsWhite.png'
+import TransactionsWhite from '../../images/Iconly/Light outline/TransactionsWhite.png'
 function ReuseIndividualUser({fs,ls,email,mobile,dob}) {
     const image='https://www.sketchappsources.com/resources/source-image/profile-illustration-gunaldi-yunus.png'
     const [display,setDispaly]=useState('none')
@@ -35,18 +38,19 @@ function ReuseIndividualUser({fs,ls,email,mobile,dob}) {
            
         
                 <div className='infoContainer ic1'>
-                    <PermIdentityIcon /> 
+                    <img src={AdminWhite} alt=''/>
                     <span>Childrens</span>
                     
                 </div>
           
                 <div className='infoContainer ic2'>
-                    <EventNoteIcon/> 
+                    <img src={EventsWhite} alt=''/>
                     <span>Events</span>
                 </div>
           
                 <div onClick={()=>dispatch(SetNewHomeState('Transactions'))} className='infoContainer ic3'>
-                    <ImportExportIcon/> 
+                    <img src={TransactionsWhite} alt=''/>
+         
                     <span>Transactions</span>
                 </div>
                <div className='infobtnContainer'>

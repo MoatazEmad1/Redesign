@@ -6,6 +6,7 @@ import ImportExportOutlinedIcon from '@material-ui/icons/ImportExportOutlined';
 import ReuseInputPopUp from '../../utils/popup/ReuseInputPopUp'
 import {PopUp} from '../../styles/PopUp.styles'
 import {useDispatch} from 'react-redux'
+import TransactionsWhite from '../../images/Iconly/Light outline/TransactionsWhite.png'
 import {SetNewHomeState} from '../../Redux/Actions/HomeActionCreator'
 function BusinessUsersReuse({user_name,business_name,mobile,email}) {
     const image='https://www.sketchappsources.com/resources/source-image/profile-illustration-gunaldi-yunus.png'
@@ -39,7 +40,7 @@ function BusinessUsersReuse({user_name,business_name,mobile,email}) {
           
            
             <div onClick={(e)=>dispatch(SetNewHomeState('Transactions'))} className='BtnContainer'>
-            <ImportExportOutlinedIcon/>
+           <img src={TransactionsWhite} alt=''/>
             <span>Transactions</span>
             </div>
             <div className='BtnContainerActive'>

@@ -4,8 +4,9 @@ export const Container =styled.div`
 background-color: white;
 width: 256px;
 height: 830px;
-border:1px solid #F3F4F6;
 position: relative;
+border-right: 1px solid #F3F4F6;
+border-bottom: 1px solid #F3F4F6;
 padding-top: 30px;
     img{
         width: 103px;
@@ -49,9 +50,44 @@ position: absolute;
 top: 18px;
 left: 22.78px;
 bottom: 18px;
+width: 18px;
+height: 18px;
 right: 174.86;
-}
 
+}
+.iconpsContainer{
+    position: relative;
+    width: ${(props)=>props.wdIcon?props.wdIcon:18}px;
+    height: ${(props)=>props.wdIcon?props.htIcon:18}px;
+   
+ 
+}
+.parentImg{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+   
+
+}
+.centerImg{
+    position: absolute;
+    width: 10px;
+    height: 5px;
+    top: 6px;
+    left: 4px;
+   
+ 
+}
+.topRightImg{
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    top: 0px;
+    left: 14px;
+    
+}
 .titlePs{
     position: absolute;
     left: 60px;

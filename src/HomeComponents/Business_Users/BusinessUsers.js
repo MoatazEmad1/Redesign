@@ -3,6 +3,9 @@ import {BusinessUsersContainer,Wraper,WraperHeader,WraperContent} from '../../st
 import SearchIcon from '@material-ui/icons/Search';
 import BusinessUsersReuse from './BusinessUsersReuse'
 import Paginate from '../../utils/Paginate'
+import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import search from '../../images/Iconly/Search.png'
+
 function BusinessUsers() {
     
     return (
@@ -10,26 +13,32 @@ function BusinessUsers() {
             <span>Business Users</span>
             <Wraper>
 
-                <WraperHeader>
+            <WraperHeader>
                 <div className='search'>
-                <SearchIcon className='searchIcon'/>
+                    <div className='searchIcon' >
+                        <img src={search} alt=''/>
+                    </div>
+               
                 <input type='text' placeholder='Search...'/>
                 </div>
                 <div className='sort'>
 
               
                 <div className='sortUsers'> 
-                 <span>Sort By:</span>
-                    <select>
-                    <option value="Default">Default</option>
-                    </select>
+                 <span className='sortby'>Sort By:</span>
+                 <span className='default'>Default</span>
+                 <div className='downarrowContainer'>
+                    <ArrowDropDownIcon/>
+                 </div>
+                  
                 </div>
-               
+                
                 <div className='btn'>
                <button >Add</button>
-               </div>
-               </div>
-                </WraperHeader>
+              
+                </div>
+                </div>
+            </WraperHeader>
                 <WraperContent>
                
                     <span id='pe'>Profile Image</span>

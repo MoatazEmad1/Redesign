@@ -59,15 +59,36 @@ border-radius: 20px;
 position: relative;
 .imageContainer{
     display: flex;
-  position: absolute;
-  left:16px;
-  top:16px;
+ 
     img{
+       
         width: 32px;
         height: 32px;
-        border-radius: 50%;
+        border-radius: 50% ;
+      
+      
     }
   
+}
+#imgit1{
+    position: absolute;
+        left:16px;
+        top:16px;
+}
+#imgit2{
+    position: absolute;
+        left:70px;
+        top:16px;
+}
+#imgit3{
+    position: absolute;
+        left:124px;
+        top:16px;
+}
+#imgit4{
+    position: absolute;
+        left:178px;
+        top:16px;
 }
 .infoContainer{
     position: absolute;
