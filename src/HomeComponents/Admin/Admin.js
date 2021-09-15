@@ -73,7 +73,7 @@ function Admin() {
           {/* Pagination */}
             <Paginate/>
           {/* Pop up Model */}
-            <PopUp showBlockOrNone={display} wd='540' ht='711'>
+            <PopUp showBlockOrNone={display} wd='500' ht='470'>
                 <div className='popupModel'>
                     <div className='headerPopUp'>
                     <span>Add Contact</span>  
@@ -85,19 +85,24 @@ function Admin() {
                     <div className='popupModelContent'>
                         <div className='popupModelContentLf'>
                            
-                                <img src={image} alt=''/>
+                                
                            
-                            <ReuseInputPopUp label='Department' initialVal='Department'/>
-                            <ReuseInputPopUp label='Phone' initialVal='Enter your phone number'/>
-                            <ReuseInputPopUp label='Adress' initialVal='Enter your Adress'/>
+                            <ReuseInputPopUp label='Name' initialVal='Enter name'/>
+                            <ReuseInputPopUp label='Email' initialVal='Enter Email'/>
+                         
                             
                         </div>
                         <div className='popupModelContentRt'>
-                        <ReuseInputPopUp label='First name' initialVal='Enter your First name'/>
-                        <ReuseInputPopUp label='Last name' initialVal='Enter your Last name'/>
-                        <ReuseInputPopUp label='Company' initialVal='Enter your Company name'/>
-                        <ReuseInputPopUp label='Email' initialVal='Enter your Email'/>
-                        <ReuseInputPopUp label='Note' initialVal='Enter your Note'/>
+                        <ReuseInputPopUp label='Password' initialVal='Password'/>
+                        <ReuseInputPopUp label='Confirm Password' initialVal='Password'/>
+                        <div className='Role'>
+                            <label>Role</label>
+                            <select>
+                                <option>Admin</option>
+                                <option>Finance</option>
+                                <option>Ops</option>
+                            </select>
+                        </div>
                         </div>
                         
                     </div>

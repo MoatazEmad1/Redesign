@@ -6,12 +6,11 @@ margin-top: 30px;
 margin-left: 30px;
 width: 1184px;
 
-span{
+#headerTitle{
     color:#212A54;
     font-size: 20px;
     font-weight:600 ;
 }
-
 
 
 `

@@ -20,7 +20,7 @@ function WithdrawalList() {
   
     return (
         <WithdrawalListContainer>
-           <span>Withdrawal List</span>
+           <span id='headerTitle'>Withdrawal List</span>
 
            <Wraper>
                <WraperHeader>

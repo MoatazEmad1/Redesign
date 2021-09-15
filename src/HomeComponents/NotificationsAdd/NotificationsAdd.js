@@ -8,13 +8,6 @@ function NotificationsAdd() {
                 <WraperHeader>
              
                 <div className='sort'>
-                <div className='sortUsers'> 
-                 <span>Sort By:</span>
-                    <select>
-                    <option value="Default">Default</option>
-                    </select>
-                </div>
-               
                 <div className='btn'>
                <button>Add</button>
                </div>

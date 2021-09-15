@@ -150,4 +150,23 @@ display: ${(props)=>props.showBlockOrNone};
    
 }
 
+.Role{
+    display: flex;
+    flex-direction: column;
+    margin-bottom:20px;
+    label{
+        font-size: 14px;
+        color: #212A54;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+    select{
+        width:100px;
+        padding:15px 16px 15px 16px;
+        border:1px solid #F1F1F5;
+        border-radius: 14px;
+        outline: none;
+    }
+}
+
 `

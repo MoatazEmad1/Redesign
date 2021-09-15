@@ -31,11 +31,6 @@ function IndividualUser() {
                  </div>
                   
                 </div>
-                
-                <div className='btn'>
-               <button >Add</button>
-              
-                </div>
                 </div>
             </WraperHeader>
             <WraperContent>
