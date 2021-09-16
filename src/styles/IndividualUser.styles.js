@@ -109,6 +109,28 @@ span{
   }
 }
 }
+.DATE{
+    display: flex;
+    align-items: center;
+   position: absolute;
+   top: 20px;
+   right: 400px;
+   height: 38px;
+   width: 314px;
+   border: 1px solid #F1F1F5;
+  border-radius: 14px;
+   img{
+       width: 20px;
+       height: 20px;
+       object-fit: cover;
+       margin-right: 10px;
+       margin-left: 15px;
+   }
+}
+#datepicker{
+ border: none;
+ outline: none;
+}
 `
 export const WraperContent=styled.div`
 

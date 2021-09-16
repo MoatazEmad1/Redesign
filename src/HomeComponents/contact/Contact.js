@@ -4,10 +4,14 @@ import SearchIcon from '@material-ui/icons/Search';
 import Paginate from '../../utils/Paginate'
 import search from '../../images/Iconly/Search.png'
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-function Contact() {
+import {useDispatch} from 'react-redux'
+import {SetNewHomeState} from '../../Redux/Actions/HomeActionCreator'
+function Contact({contactEdit,setcontactEdit,contactInfo}) {
+    const dispatch=useDispatch()
+  
     return (
         <ContactContainer>
-           <span>Contact</span>
+           <span id='HeaderTitle'>Contact</span>
            <Wraper>
                <WraperHeader>
                <div className='search'>
@@ -42,13 +46,19 @@ function Contact() {
                 </WraperContent>
                 <WraperInfo>
                     <span id='id'>Terms</span>
-                    <span id='name'>-</span>
-                    <button id='action'>Edit</button>
+                    <span id='name'>{contactEdit==='Terms'?contactInfo:'-'}</span>
+                    <button id='action' onClick={()=>{
+                        dispatch(SetNewHomeState('Edit'))
+                        setcontactEdit('Terms')
+                    }}>Edit</button>
                 </WraperInfo>
                 <WraperInfo>
                     <span id='id'>Privacy</span>
-                    <span id='name'>-</span>
-                    <button id='action'>Edit</button>
+                    <span id='name'>{contactEdit==='Privacy'?contactInfo:'-'}</span>
+                    <button id='action' onClick={()=>{
+                        dispatch(SetNewHomeState('Edit'))
+                        setcontactEdit('Privacy')
+                    }}>Edit</button>
                 </WraperInfo>
            </Wraper>
            <Paginate/>

@@ -1,4 +1,4 @@
-import React from 'react'
+import React,{useState} from 'react'
 import LeftSide from './LeftSide'
 import {Container} from '../styles/Home.styles'
 import {useSelector} from 'react-redux'
@@ -20,7 +20,11 @@ import OfferListAdd from '../HomeComponents/OfferListAdd/OfferListAdd'
 import Notifications from '../HomeComponents/Notifications/Notifications'
 import NotificationsAdd from '../HomeComponents/NotificationsAdd/NotificationsAdd'
 import MyProfile from '../HomeComponents/MyProfile/MyProfile'
+import Edit from '../HomeComponents/contact/Edit'
 function Home() {
+    const [contactEdit,setcontactEdit]=useState(null)
+    const [contactInfo,setcontacInfo]=useState(null)
+    
     const homestate=useSelector((state)=>state.HomeState)
    const handelState=()=>{
        switch(homestate){
@@ -65,12 +69,20 @@ function Home() {
             return <EventsDetails/>
           
            case 'Contact':
-            return <Contact/>
+            return <Contact 
+            contactEdit={contactEdit} 
+            setcontactEdit={setcontactEdit}
+            contactInfo={contactInfo}
+            />
           
            case 'Notification':
             return <Notifications/>
            case 'NotificationsAdd':
             return <NotificationsAdd/>
+           case 'Edit':
+            return <Edit title={contactEdit}
+            setcontacInfo={setcontacInfo}
+            />
           
            default:return <h1>Error</h1>
        }

@@ -4,7 +4,8 @@ function ReuseInputPopUp({label,initialVal}) {
     return (
         <ReuseInputPopUpConatiner>
             <span>{label}</span>
-            <input type='text' placeholder={initialVal}/>
+            {label==='Email'||label==='Mobile Number'? <input disabled type='text' placeholder={initialVal}/>:  <input type='text' placeholder={initialVal}/>}
+          
         </ReuseInputPopUpConatiner>
     )
 }

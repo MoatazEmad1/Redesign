@@ -6,12 +6,36 @@ margin-top: 30px;
 margin-left: 30px;
 width: 1184px;
 
-span{
+#HeaderTitle{
     color:#212A54;
     font-size: 20px;
     font-weight:600 ;
 }
 
+.Description{
+    width: 400px;
+    height: 400px;
+    margin: 30px;
+}
+.Title{
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    label{
+        color:#212A54;
+    font-size: 14px;
+    font-weight:700 ;
+    margin-bottom: 10px;
+    }
+    input{
+        width: 314px;
+        padding:15px 16px 15px 16px;
+        border:1px solid #F1F1F5;
+        border-radius: 14px;
+        outline: none;
+
+    }
+}
 `
 
 export const Wraper=styled.div`
@@ -111,6 +135,11 @@ span{
   }
 }
 }
+.Editbtn{
+    position: absolute;
+    bottom:0px;
+    right: 0px;
+}
 `
 
 export const WraperContent=styled.div`
@@ -174,4 +203,17 @@ button{
     top:10px;
     left:863px;
 }
+`
+
+export const Button=styled.button`
+
+padding:10px;
+border-radius: 10px;
+color:white;
+background-color: ${(props)=>props.bg};
+border:none;
+outline:none;
+margin-right:20px;
+
+
 `

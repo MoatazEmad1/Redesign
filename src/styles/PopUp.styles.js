@@ -169,4 +169,35 @@ display: ${(props)=>props.showBlockOrNone};
     }
 }
 
+
+.QRCodeContainer{
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    margin-bottom:20px;
+    label{
+        font-size: 14px;
+        color: #212A54;
+        font-weight: 700;
+    }
+    img{
+        width: 70px;
+        height: 70px;
+    
+        object-fit: cover;
+    }
+}
+.FileUploader{
+    display: flex;
+   flex-direction: column;
+   
+    margin-bottom:20px;
+    label{
+        font-size: 14px;
+        color: #212A54;
+        font-weight: 700;
+        margin-bottom: 16px;
+    }
+   
+}
 `
