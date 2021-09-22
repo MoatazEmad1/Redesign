@@ -2,7 +2,7 @@ import React from 'react'
 import {LogInContainer,ImageContainer,Card} from '../styles/LogIn.styles'
 import {useDispatch} from 'react-redux'
 import {SetNewHomeState} from '../Redux/Actions/HomeActionCreator'
-import kiwe from '../images/Kiwe.png'
+import kiwe from '../images/logo_1.png'
 function LogIn() {
     const dispatch=useDispatch();
     

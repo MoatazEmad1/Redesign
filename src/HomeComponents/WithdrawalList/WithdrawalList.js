@@ -1,5 +1,5 @@
 import React,{useState} from 'react'
-import {Btn,WraperContent,WithdrawalListContainer,Wraper,WraperHeader,Button} from '../../styles/WithdrawalList.styles'
+import {Btn} from '../../styles/WithdrawalList.styles'
 import SearchIcon from '@material-ui/icons/Search';
 import WithdrawalListReuse from './WithdrawalListReuse'
 import Paginate from '../../utils/Paginate'
@@ -7,7 +7,7 @@ import ReuseInputPopUp from '../../utils/popup/ReuseInputPopUp'
 import { PopUp} from '../../styles/PopUp.styles';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import search from '../../images/Iconly/Search.png'
-
+import {Parent,WraperContent,WithdrawalListContainer,Wraper,WraperHeader,Button} from '../../SharedStyles/HomeComponentsStyles/Home.styles'
 function WithdrawalList() {
     const [display,setDispaly]=useState('none')
     const handelUserPopUp=(e)=>{
@@ -19,8 +19,8 @@ function WithdrawalList() {
     }
   
     return (
-        <WithdrawalListContainer>
-           <span id='headerTitle'>Withdrawal List</span>
+        <Parent>
+           <span id='HeaderTitle'>Withdrawal List</span>
 
            <Wraper>
                <WraperHeader>
@@ -31,8 +31,8 @@ function WithdrawalList() {
                
                 <input type='text' placeholder='Search...'/>
                 </div>
-                <Button id='bnkr' bg='#639DFF'>Bank Transfer</Button>
-                <Button id='cd' bg='#4ECAA5'>Cash Delivery</Button>
+                <Button id='WithdrawalList_Bank_Transfer' bg='#639DFF'>Bank Transfer</Button>
+                <Button id='WithdrawalList_Cash_Delivery' bg='#4ECAA5'>Cash Delivery</Button>
                 <div className='sort'>
 
               
@@ -52,32 +52,32 @@ function WithdrawalList() {
                 </WraperHeader>
                 <WraperContent>
                   
-                    <input id='cx' type='checkbox'/>
-                    <span id='td'>Transaction Id</span>
+                    <input id='WithdrawalList_CheckBox' type='checkbox'/>
+                    <span id='WithdrawalList_Transaction_Id'>Transaction Id</span>
                    
                   
-                    <span id='ue'>User Name</span>
+                    <span id='WithdrawalList_User_Name'>User Name</span>
                    
                   
-                    <span id='me'>Mobile</span>
+                    <span id='WithdrawalList_Mobile'>Mobile</span>
                    
                   
-                    <span id='we'>Withdrawal Type</span>
+                    <span id='WithdrawalList_Withdrawal_Type'>Withdrawal Type</span>
                    
                   
-                    <span id='ts'>Transaction Fees</span>
+                    <span id='WithdrawalList_Transaction_Fees'>Transaction Fees</span>
                    
                   
-                    <span id='tne'>Transaction Charge</span>
+                    <span id='WithdrawalList_Transaction_Charge'>Transaction Charge</span>
                    
                   
-                    <span id='at'>Amount</span>
+                    <span id='WithdrawalList_Amount'>Amount</span>
                    
                   
-                    <span id='msg'>Message</span>
+                    <span id='WithdrawalList_Message'>Message</span>
                    
                   
-                    <span id='an'>Action</span>
+                    <span id='WithdrawalList_Action'>Action</span>
                    
                 </WraperContent>
                 {/* ReuseSection */}
@@ -128,7 +128,7 @@ function WithdrawalList() {
 
                </PopUp>
            <Paginate/>
-        </WithdrawalListContainer>
+        </Parent>
     )
 }
 

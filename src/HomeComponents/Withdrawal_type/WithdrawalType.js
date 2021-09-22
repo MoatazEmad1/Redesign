@@ -1,13 +1,14 @@
 import React from 'react'
-import {WithdrawalTypeContainer,Wraper,WraperHeader,WraperContent,WraperInfo} from '../../styles/WithdrawalType.styles'
+import {WraperInfo} from '../../styles/WithdrawalType.styles'
 import SearchIcon from '@material-ui/icons/Search';
 import Paginate from '../../utils/Paginate';
 import search from '../../images/Iconly/Search.png'
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import {Parent,Wraper,WraperHeader,WraperContent} from '../../SharedStyles/HomeComponentsStyles/Home.styles'
 function WithdrawalType() {
     return (
-        <WithdrawalTypeContainer>
-            <span>Withdrawal Type</span>
+        <Parent>
+            <span id='HeaderTitle'>Withdrawal Type</span>
             <Wraper>
                 <WraperHeader>
                 <div className='search'>
@@ -36,9 +37,9 @@ function WithdrawalType() {
                </div>
                 </WraperHeader>
                 <WraperContent>
-                <span id='id'>ID</span>
-                <span id='name'>Name</span>
-                <span id='action'>Action</span>
+                <span id='WithDrawalType_ID'>ID</span>
+                <span id='WithDrawalType_Name'>Name</span>
+                <span id='WithDrawalType_Action'>Action</span>
                 </WraperContent>
                 <WraperInfo>
                     <span id='id'>1</span>
@@ -52,7 +53,7 @@ function WithdrawalType() {
                 </WraperInfo>
             </Wraper>
             <Paginate/>
-        </WithdrawalTypeContainer>
+        </Parent>
     )
 }
 

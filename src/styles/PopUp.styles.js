@@ -4,13 +4,13 @@ margin-bottom:20px;
 
 display: flex;
 flex-direction: column;
-span{
+#LabelPopUp{
 color:#212A54;
 font-size:14px;
 font-weight:700;
 margin-bottom: 16px;
 }
-input{
+#InputPopUp{
 padding:15px 16px 15px 16px;
 border:1px solid #F1F1F5;
 border-radius: 14px;
@@ -80,6 +80,7 @@ display: ${(props)=>props.showBlockOrNone};
           margin-bottom: 3px;
          font-size: 16px;
           color: #262F56;
+          font-weight: 700;
     }
     .BS_Bank{
         padding-bottom: 18px;
@@ -172,8 +173,7 @@ display: ${(props)=>props.showBlockOrNone};
 
 .QRCodeContainer{
     display: flex;
-    align-items:center;
-    justify-content: space-between;
+  flex-direction: column;
     margin-bottom:20px;
     label{
         font-size: 14px;
@@ -181,10 +181,16 @@ display: ${(props)=>props.showBlockOrNone};
         font-weight: 700;
     }
     img{
-        width: 70px;
-        height: 70px;
-    
+        width: 200px;
+        height: 200px;
+        margin-left: -30px;
         object-fit: cover;
+    }
+    a{
+        text-decoration: none;
+        color:  #212A54;
+        font-size: 14px;
+        font-weight: 700;
     }
 }
 .FileUploader{
@@ -200,4 +206,5 @@ display: ${(props)=>props.showBlockOrNone};
     }
    
 }
+
 `

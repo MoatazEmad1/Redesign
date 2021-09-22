@@ -273,6 +273,7 @@ span{
     position: absolute;
    top:20px;
    left: 918px;
+   word-spacing: 5px;
 }
 #ss{
     position: absolute;

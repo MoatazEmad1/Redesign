@@ -8,7 +8,7 @@ margin-left: 30px;
 width: 1184px;
 height: 696px;
 
-span{
+#HeaderTitle{
     color:#212A54;
     font-size: 20px;
     font-weight:600 ;
@@ -115,27 +115,33 @@ span{
   }
 }
 }
-.DATE{
-    display: flex;
-    align-items: center;
+.BtnHeader{
    position: absolute;
-   top: 20px;
-   right: 400px;
-   height: 38px;
-   width: 314px;
-   border: 1px solid #F1F1F5;
-  border-radius: 14px;
-   img{
-       width: 20px;
-       height: 20px;
-       object-fit: cover;
-       margin-right: 10px;
-       margin-left: 15px;
-   }
+   bottom: 0px;
+   right: 425px;
+   z-index: 999;
+   display: flex;
+   align-items: center;
+   border:1px solid  #F1F1F5;
+   width: 200px;
+   border-radius: 14px;
+height: 38px;
+
 }
-#datepicker{
- border: none;
- outline: none;
+.calImg{
+    height: 38px;
+
+ display: flex;
+ align-items: center;
+ justify-content: center;
+ width: 38px;
+    border-right: 1px solid #F1F1F5;
+    img{
+      width: 20px;
+      height: 20px;
+      object-fit: cover;
+     
+  }
 }
 `
 
@@ -303,11 +309,24 @@ span{
 `
 
 export const Button=styled.button`
-border-radius: 38px;
-color:white;
-background-color: ${(props)=>props.bg};
+
+font-size: 14px;
+color: #696974;
+font-weight: 500;
 border:none;
+outline: none;
+background:none;
+width: 150px;
+cursor: pointer;
+`
+export const Btn=styled.button`
+background-color: ${(props)=>props.bg};
+color:white;
+border-radius: 38px;
 outline:none;
+border:none;
+width: 225px;
 height: 48px;
-width: 255px;
+
+
 `

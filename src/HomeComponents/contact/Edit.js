@@ -6,15 +6,17 @@ import draftToHtml from "draftjs-to-html";
 import {useDispatch} from 'react-redux'
 import {SetNewHomeState} from '../../Redux/Actions/HomeActionCreator'
 import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+// import { CKEditor } from '@ckeditor/ckeditor5-react';
+// import ClassicEditor from '@ckeditor/ckeditor5-build-classic';
+import CKEditor from "react-ckeditor-component";
 function Edit({title,setcontacInfo}) {
-    const [editorState,setEditorState]=useState(EditorState.createEmpty())
-    const EditorStateChange=(editorState)=>{
-        setEditorState(editorState);
+    const [editorState,setEditorState]=useState('')
+    const EditorStateChange=(evt)=>{
+        setEditorState(evt.editor.getData());
     }
     const dispatch=useDispatch()
-   console.log(draftToHtml(convertToRaw(editorState.getCurrentContent())))
    const handelContent=()=>{
-    setcontacInfo(draftToHtml(convertToRaw(editorState.getCurrentContent())))
+    setcontacInfo(editorState)
    }
     return (
         <ContactContainer>
@@ -38,13 +40,7 @@ function Edit({title,setcontacInfo}) {
                 </div>
 
                 <div className='Description'>
-                <Editor
-                    editorState={editorState}
-                    toolbarClassName="toolbarClassName"
-                    wrapperClassName="wrapperClassName"
-                    editorClassName="editorClassName"
-                    onEditorStateChange={EditorStateChange}
-                    />;
+              <CKEditor events={{"change": EditorStateChange}} content={editorState}  name={'description'} />
                 </div>
             </Wraper>
 

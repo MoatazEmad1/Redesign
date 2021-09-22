@@ -174,6 +174,7 @@ span{
     position: absolute;
     top:20px;
     left:978px;
+    
 }
 `
 
@@ -277,6 +278,7 @@ img{
     position: absolute;
     top:20px;
     left:978px;
+    word-spacing: 5px;
 }
 `
 

@@ -1,14 +1,14 @@
 import React from 'react'
-import {TransactionFeesContainer,Wraper,WraperHeader,WraperInfo,WraperContent} from '../../styles/TransactionFees.styles'
+import {WraperInfo} from '../../styles/TransactionFees.styles'
 import SearchIcon from '@material-ui/icons/Search';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 import Paginate from '../../utils/Paginate';
 import search from '../../images/Iconly/Search.png'
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
-
+import {Parent,Wraper,WraperHeader,WraperContent} from '../../SharedStyles/HomeComponentsStyles/Home.styles'
 function TransactionFees() {
     return (
-        <TransactionFeesContainer>
+        <Parent>
             <Wraper>
             <WraperHeader>
                 <div className='search'>
@@ -32,9 +32,9 @@ function TransactionFees() {
                 </div>
             </WraperHeader>
                 <WraperContent>
-                <span id='id'>Free type</span>
-                <span id='name'>Fees</span>
-                <span id='action'>Action</span>
+                <span id='TransactionFees_Free_Type'>Free type</span>
+                <span id='TransactionFees_Fees'>Fees</span>
+                <span id='TransactionFees_Action'>Action</span>
                 </WraperContent>
 
                 <WraperInfo>
@@ -91,7 +91,7 @@ function TransactionFees() {
                 </WraperInfo>
             </Wraper>
             <Paginate/>
-        </TransactionFeesContainer>
+        </Parent>
     )
 }
 

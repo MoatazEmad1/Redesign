@@ -1,5 +1,5 @@
 import React from 'react'
-import {WraperContent,WraperHeader,Wraper,EventsContainer} from '../../styles/Events.styles'
+//import {WraperContent,WraperHeader,Wraper,EventsContainer} from '../../styles/Events.styles'
 import SearchIcon from '@material-ui/icons/Search';
 import EventsReuse from './EventsReuse'
 import Paginate from '../../utils/Paginate'
@@ -7,11 +7,12 @@ import {useDispatch} from 'react-redux'
 import {SetNewHomeState} from '../../Redux/Actions/HomeActionCreator'
 import search from '../../images/Iconly/Search.png'
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import {Parent,WraperContent,WraperHeader,Wraper} from '../../SharedStyles/HomeComponentsStyles/Home.styles'
 function Events() {
     const dispatch=useDispatch()
     return (
-        <EventsContainer>
-            <span>Events</span>
+        <Parent>
+            <span id='HeaderTitle'>Events</span>
             <Wraper>
                 <WraperHeader>
                 <div className='search'>
@@ -40,40 +41,40 @@ function Events() {
                 </WraperHeader>
                 <WraperContent>
                
-                        <input id='cx' type='checkbox'/>
-                        <span id='ed'>Event Id</span>
+                        <input id='Events_Checkbox' type='checkbox'/>
+                        <span id='Events_Event_Id'>Event Id</span>
                 
                
                       
-                        <span id='us'>Users</span>
+                        <span id='Events_Users'>Users</span>
                 
                
                       
-                        <span id='or'>Owner</span>
+                        <span id='Events_Owner'>Owner</span>
                 
                
                       
-                        <span id='et'>Event Name</span>
+                        <span id='Events_Event_Name'>Event Name</span>
                 
                
                       
-                        <span id='ete'>Event Date</span>
+                        <span id='Events_Event_Date'>Event Date</span>
                 
                
                       
-                        <span id='el'>Event Balance</span>
+                        <span id='Events_Event_Balance'>Event Balance</span>
                 
                
                       
-                        <span id='cs'>Contributers</span>
+                        <span id='Events_Contributers'>Contributers</span>
                 
                
                       
-                        <span id='ts'>Transactions</span>
+                        <span id='Events_Transactions'>Transactions</span>
                 
                
                       
-                        <span id='ct'>Created At</span>
+                        <span id='Events_Created_At'>Created At</span>
                 
                 </WraperContent>
                 {/* Reuse section */}
@@ -87,7 +88,7 @@ function Events() {
                
             </Wraper>
             <Paginate/>
-        </EventsContainer>
+        </Parent>
     )
 }
 

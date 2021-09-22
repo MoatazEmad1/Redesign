@@ -187,6 +187,7 @@ span{
     position: absolute;
     top:20px;
     left:863px;
+    word-spacing: 5px;
 }
 
 `

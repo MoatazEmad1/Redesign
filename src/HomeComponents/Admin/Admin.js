@@ -1,11 +1,12 @@
 import React,{useState} from 'react'
-import {AdminContainer,Wraper,WraperHeader,WraperContent} from '../../styles/Admin.styles'
+//import {AdminContainer,Wraper,WraperHeader,WraperContent} from '../../styles/Admin.styles'
 import AdminReuseUsers from './AdminReuseUsers';
 import Paginate from '../../utils/Paginate';
 import ReuseInputPopUp from '../../utils/popup/ReuseInputPopUp'
 import { PopUp } from '../../styles/PopUp.styles';
 import search from '../../images/Iconly/Search.png'
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import {Parent,Wraper,WraperContent,WraperHeader} from '../../SharedStyles/HomeComponentsStyles/Home.styles'
 function Admin() {
     const image='https://www.sketchappsources.com/resources/source-image/profile-illustration-gunaldi-yunus.png'
    
@@ -17,8 +18,8 @@ function Admin() {
         setDispaly('none')
     }
     return (
-        <AdminContainer>
-          <span>Admin</span>
+        <Parent>
+          <span id='HeaderTitle'>Admin</span>
           {/* Holds the bottom section */}
           <Wraper>
             <WraperHeader>
@@ -49,11 +50,11 @@ function Admin() {
             </WraperHeader>
 
             <WraperContent>
-            <span id="user">User Name</span>
-            <span id='email'>Email</span>
-            <span id='ca'>Created At</span>
-            <span id='re'>Role</span>
-            <span id='an'>Action</span>
+            <span id="Admin_User_Name">User Name</span>
+            <span id='Admin_Email'>Email</span>
+            <span id='Admin_Created_At'>Created At</span>
+            <span id='Admin_Role'>Role</span>
+            <span id='Admin_Action'>Action</span>
             </WraperContent>
             {/* Reuse section */}
          
@@ -76,7 +77,7 @@ function Admin() {
             <PopUp showBlockOrNone={display} wd='500' ht='470'>
                 <div className='popupModel'>
                     <div className='headerPopUp'>
-                    <span>Add Contact</span>  
+                    <span id='HeaderTitle'>Add Contact</span>  
                     <div id='closeBtn'>
                          <span id='close'  onClick={handelCloseModel}>x</span>
                     </div>
@@ -113,7 +114,7 @@ function Admin() {
                 </div>
 
                </PopUp>
-        </AdminContainer>
+        </Parent>
     )
 }
 

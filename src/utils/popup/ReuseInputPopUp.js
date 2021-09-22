@@ -1,10 +1,10 @@
 import React from 'react'
 import {ReuseInputPopUpConatiner} from '../../styles/PopUp.styles'
-function ReuseInputPopUp({label,initialVal}) {
+function ReuseInputPopUp({label,initialVal,AdminAccess}) {
     return (
         <ReuseInputPopUpConatiner>
-            <span>{label}</span>
-            {label==='Email'||label==='Mobile Number'? <input disabled type='text' placeholder={initialVal}/>:  <input type='text' placeholder={initialVal}/>}
+            <span id='LabelPopUp'>{label}</span>
+            {AdminAccess==='false'? <input id='InputPopUp' disabled type='text' placeholder={initialVal}/>:  <input id='InputPopUp' type='text' placeholder={initialVal}/>}
           
         </ReuseInputPopUpConatiner>
     )

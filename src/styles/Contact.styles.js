@@ -45,7 +45,9 @@ border:1px solid #F1F1F5;
 background-color: #FFFFFF;
 width:1122px;
 margin-top:30px;
-
+.Description{
+    width: 700px;
+}
 `
 export const WraperHeader=styled.div`
 width: 100%;

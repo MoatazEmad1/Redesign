@@ -1,17 +1,28 @@
 import React,{useState} from 'react'
-import {BusinessUsersContainer,Wraper,WraperHeader,WraperContent} from '../../styles/BusinessUsers.styles'
+//import {BusinessUsersContainer,Wraper,WraperHeader,WraperContent,Button} from '../../styles/BusinessUsers.styles'
 import SearchIcon from '@material-ui/icons/Search';
 import BusinessUsersReuse from './BusinessUsersReuse'
 import Paginate from '../../utils/Paginate'
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import search from '../../images/Iconly/Search.png'
 import DatePicker from "react-datepicker";
+import DateSelection from '../../SharedComponents/Date/DateSelection'
+import {Parent,Wraper,WraperHeader,WraperContent,Button} from '../../SharedStyles/HomeComponentsStyles/Home.styles'
 function BusinessUsers() {
     const calenderImg='https://www.pngkey.com/png/full/109-1094594_calendar-clipart-png-transparent-calendar-icon-transparent-background.png'
     const [startDate, setStartDate] = useState(new Date());
+    const [showBtn,setshowBtn]=useState('block')
+    const HandelShowDate=()=>{
+        if(showBtn==='block'){
+            setshowBtn('none')
+        }else{
+            setshowBtn('block')
+        }
+            
+    }
     return (
-        <BusinessUsersContainer>
-            <span>Business Users</span>
+        <Parent>
+            <span id='HeaderTitle'>Business Users</span>
             <Wraper>
 
             <WraperHeader>
@@ -22,12 +33,7 @@ function BusinessUsers() {
                
                 <input type='text' placeholder='Search...'/>
                 </div>
-                <div className='DATE'>
-                    <img src={calenderImg} alt=''/>
-                  <DatePicker id='datepicker' selected={startDate} onChange={(date) => setStartDate(date)} isClearable showYearDropdown scrollableMonthYearDropdown
-                  placeholderText="Enter A Date"
-                  />
-                 </div>
+              
                 <div className='sort'>
 
               
@@ -48,17 +54,17 @@ function BusinessUsers() {
             </WraperHeader>
                 <WraperContent>
                
-                    <span id='pe'>Profile Image</span>
-                    <span id='username'>User Name</span>
-                    <span id='bank'>Bank</span>
-                    <span id='be'>Business Name</span>
-                    <span id='mobile'>Mobile</span>
-                    <span id='email'>Email</span>
+                    <span id='BusinessUser_Profile_Image'>Profile Image</span>
+                    <span id='BusinessUser_User_Name'>User Name</span>
+                    <span id='BusinessUser_Bank'>Bank</span>
+                    <span id='BusinessUser_Business_Name'>Business Name</span>
+                    <span id='BusinessUser_Mobile'>Mobile</span>
+                    <span id='BusinessUser_Email'>Email</span>
                 
 
                
-                    <span id='ts'>Transactions</span>
-                    <span id='as'>Actions</span>
+                    <span id='BusinessUser_Transactions'>Transactions</span>
+                    <span id='BusinessUser_Actions'>Actions</span>
                
 
                 </WraperContent>
@@ -76,7 +82,7 @@ function BusinessUsers() {
             </Wraper>
         {/* pagination */}
         <Paginate/>
-        </BusinessUsersContainer>
+        </Parent>
     )
 }
 

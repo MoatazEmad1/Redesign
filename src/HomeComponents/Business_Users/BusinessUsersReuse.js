@@ -1,6 +1,6 @@
 import React,{useState,useEffect} from 'react'
 import AccountBalanceOutlinedIcon from '@material-ui/icons/AccountBalanceOutlined';
-import {BusinessUsersReuseContainer,Button} from '../../styles/BusinessUsers.styles'
+import {BusinessUsersReuseContainer,Btn} from '../../styles/BusinessUsers.styles'
 import InfoOutlinedIcon from '@material-ui/icons/InfoOutlined';
 import ImportExportOutlinedIcon from '@material-ui/icons/ImportExportOutlined';
 import ReuseInputPopUp from '../../utils/popup/ReuseInputPopUp'
@@ -9,6 +9,7 @@ import {useDispatch} from 'react-redux'
 import TransactionsWhite from '../../images/Iconly/Light outline/TransactionsWhite.png'
 import {SetNewHomeState} from '../../Redux/Actions/HomeActionCreator'
 import QRCode from 'qrcode'
+import QrImg from '../../images/logo_1.png'
 function BusinessUsersReuse({user_name,business_name,mobile,email}) {
     const image='https://www.sketchappsources.com/resources/source-image/profile-illustration-gunaldi-yunus.png'
     const [display,setDispaly]=useState('none')
@@ -17,6 +18,7 @@ function BusinessUsersReuse({user_name,business_name,mobile,email}) {
     const [qrcodeImg,setqrcodeImg]=useState('')
     useEffect(()=>{
         QRCode.toDataURL(QRcodeKey).then(data=>{
+            console.log(data)
             setqrcodeImg(data)
         })
     },[])
@@ -59,7 +61,7 @@ function BusinessUsersReuse({user_name,business_name,mobile,email}) {
                   
 
             
-            <PopUp showBlockOrNone={display} wd='700' ht='600'>
+            <PopUp showBlockOrNone={display} wd='700' ht='750'>
                 <div className='popupModel'>
                     <div className='headerPopUp BS_Bank'>
                     <span id='title' className='BS_Bank_Title'>Motaz Emad G.Bank Account</span>  
@@ -81,15 +83,16 @@ function BusinessUsersReuse({user_name,business_name,mobile,email}) {
                         <ReuseInputPopUp label='Swift code' initialVal='Nbe123'/>
                         <div className='QRCodeContainer'>
                             <label>QR Code</label>
-                            <img src={qrcodeImg} alt=''/>
+                            <img src='https://kiweapp.s3.eu-central-1.amazonaws.com/stage/6/qr_code/%2B20-7043087502.png' alt=''/>
+                            <a href='https://kiweapp.s3.eu-central-1.amazonaws.com/stage/6/qr_code_pdf/%2B20-7043087502.pdf' download>Download Qr Code</a>
                         </div>
                        
                         </div>
                         
                     </div>
                     <div className='btnsContainer'>
-                        <Button bg='#04B4FF'>Export</Button>
-                        <Button bg='#4ECAA5'>Print</Button>
+                        <Btn bg='#04B4FF'>Export</Btn>
+                        <Btn bg='#4ECAA5'>Print</Btn>
                     </div>
                 </div>
 
@@ -109,8 +112,8 @@ function BusinessUsersReuse({user_name,business_name,mobile,email}) {
                                 <label>Profile Image</label>
                                 <input type='file' />
                             </div>
-                            <ReuseInputPopUp label='Business' initialVal='Mohammed Khalifa'/>
-                            <ReuseInputPopUp label='Email' initialVal='moataz@gmail.com'/>
+                            <ReuseInputPopUp  label='Business' initialVal='Mohammed Khalifa'/>
+                            <ReuseInputPopUp AdminAccess='false' label='Email' initialVal='moataz@gmail.com' checkAdminEdit={false}/>
                             <ReuseInputPopUp label='User ID' initialVal='(406) 555-0120'/>
                             <ReuseInputPopUp label='Commercial Register' initialVal='(406) 555-0120'/>
                             <ReuseInputPopUp label='Allow Auto Withdrawal' initialVal='No'/>
@@ -118,7 +121,7 @@ function BusinessUsersReuse({user_name,business_name,mobile,email}) {
                         </div>
                         <div className='popupModelContentMd'>
                         <ReuseInputPopUp label='Business Description' initialVal='155532428'/>
-                        <ReuseInputPopUp label='Mobile Number' initialVal='01554477068'/>
+                        <ReuseInputPopUp AdminAccess='false' label='Mobile Number' initialVal='01554477068' checkAdminEdit={false}/>
                         <ReuseInputPopUp label='Website' initialVal='kiwe.com'/>
                         <ReuseInputPopUp label='Tax Id' initialVal='126644746'/>
                         <ReuseInputPopUp label='Bussiness Transaction fees' initialVal='0.1 %'/>
@@ -135,8 +138,8 @@ function BusinessUsersReuse({user_name,business_name,mobile,email}) {
                       
                     </div>
                     <div className='btnsContainer'>
-                        <Button bg='#04B4FF'>Close</Button>
-                        <Button bg='#4ECAA5'>Print</Button>
+                        <Btn bg='#04B4FF'>Close</Btn>
+                        <Btn bg='#4ECAA5'>Print</Btn>
                     </div>
                    
                 </div>

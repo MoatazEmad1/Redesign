@@ -401,7 +401,7 @@ function LeftSide() {
                         {lfBg.it12?<img className='parentImg' src={ContactWhite} alt=''/>:<img className='parentImg' src={Contact} alt=''/>}
                     </div>
                 </div>
-                <span  className='titlePs'>Contact</span>
+                <span  className='titlePs'>Content</span>
                 <ChevronRightIcon className='arrowPs'/>
             </LfContainer>
             <LfContainer wdIcon={17} htIcon={20} selected={lfBg.it13} onClick={(e)=>{

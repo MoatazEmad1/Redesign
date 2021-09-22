@@ -16,34 +16,34 @@ span{
 position: relative;
 
 
-#img_txt1{
+#num_txt1{
 position: absolute;
 left:29px;
 top:30px;
 
 
 }
-#img_txt2{
+#num_txt2{
     position: absolute;
     left:413px;
     top:30px;
 }
-#num_txt1{
+#num_txt3{
     position: absolute;
     left:797px;
     top:30px;
 }
-#num_txt2{
+#num_txt4{
 position: absolute;
 left:29px;
 top:153px;
 }
-#num_txt3{
+#num_txt5{
     position: absolute;
     left:413px;
     top:153px;
 }
-#num_txt4{
+#num_txt6{
     position: absolute;
     left:797px;
     top:153px;
@@ -194,6 +194,7 @@ width: 100%;
 `
 export const UsersDashBoardHeader=styled.div`
 background-color: #212A54;
+
 span{
    color: #FFFFFF; 
    font-weight: 600;
@@ -203,56 +204,56 @@ width: 546px;
 height: 46px;
 border-top-left-radius:10px;
 border-top-right-radius:10px;
-#tit1{
+#Owner{
     position: absolute;
     top:14px;
     left:10px;
     font-size: 14px;
 }
-#tit2{
+#Wallet_Name{
     position: absolute;
     top:14px;
     left:196px;
     font-size: 12px;
 }
-#tit3{
+#Event_Date{
     position: absolute;
     top:14px;
     left:321px;
     font-size: 12px;
 }
-#tit4{
+#Created_On{
     position: absolute;
     top:14px;
     left:434px;
     font-size: 12px;
 }
-#rttit1{
+#Owner_Two{
     position: absolute;
     top:14px;
     left:10px;
     font-size: 14px;
     
 }
-#rttit2{
+#Transaction_To{
     position: absolute;
     top:14px;
     left:154px;
     font-size: 12px;
 }
-#rttit3{
+#Amount{
     position: absolute;
     top:14px;
     left:272px;
     font-size: 12px;
 }
-#rttit4{
+#Message{
     position: absolute;
     top:14px;
     left:349px;
     font-size: 12px;
 }
-#rttit5{
+#Created_Date_Time{
     position: absolute;
     top:14px;
     left:415px;
@@ -298,11 +299,13 @@ border: 1px solid #F1F1F5;
         position: absolute;
         top:17px;
         left:321px;
+        word-spacing: 5px;
     }
     #ps_co{
         position: absolute;
         top:17px;
         left:434px;
+        word-spacing: 5px;
     }
 
 `
@@ -359,5 +362,6 @@ left:349px;
     position: absolute;
 top:17px;
 left:415px;
+word-spacing: 5px;
 }
 `

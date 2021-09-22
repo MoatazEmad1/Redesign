@@ -1,5 +1,5 @@
 import React from 'react'
-import {WraperInfo,WraperContent,WraperHeader,Wraper,NotificationsContainer} from '../../styles/Notifications.styles'
+import {WraperInfo} from '../../styles/Notifications.styles'
 import Paginate from '../../utils/Paginate'
 import SearchIcon from '@material-ui/icons/Search';
 import NotificationsReuse from './NotificationsReuse'
@@ -7,11 +7,12 @@ import {useDispatch} from 'react-redux'
 import {SetNewHomeState} from '../../Redux/Actions/HomeActionCreator'
 import search from '../../images/Iconly/Search.png'
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
+import {Parent,Wraper,WraperContent,WraperHeader} from '../../SharedStyles/HomeComponentsStyles/Home.styles'
 function Notifications() {
     const dispatch=useDispatch()
     return (
-        <NotificationsContainer>
-           <span>Notifications</span>
+        <Parent>
+           <span id='HeaderTitle'>Notifications</span>
            <Wraper>
                <WraperHeader>
                <div className='search'>
@@ -40,16 +41,16 @@ function Notifications() {
                </WraperHeader>
                <WraperContent>
                
-                    <span id='nid'>Notification ID</span>
+                    <span id='Notifications_Notification_ID'>Notification ID</span>
                 
                
-                    <span id='nt'>Notification Text</span>
+                    <span id='Notifications_Notification_Text'>Notification Text</span>
                 
                
-                    <span id='ni'>Notification Image</span>
+                    <span id='Notifications_Notification_Image'>Notification Image</span>
                 
                
-                    <span id='cts'>Created Time Stamp</span>
+                    <span id='Notifications_Created_Time_Stamp'>Created Time Stamp</span>
                 
               
                </WraperContent>
@@ -61,7 +62,7 @@ function Notifications() {
               <NotificationsReuse id={22} text='test'/>
            </Wraper>
            <Paginate/>
-        </NotificationsContainer>
+        </Parent>
     )
 }
 

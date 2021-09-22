@@ -1,20 +1,34 @@
 import React, { useState } from 'react'
-import {TransactionsContainer,Wraper,WraperHeader,WraperImage,WraperContent} from '../../styles/Transactions.styles'
+import {Button,TransactionsContainer,Wraper,WraperHeader,WraperImage,WraperContent} from '../../styles/Transactions.styles'
 import SearchIcon from '@material-ui/icons/Search';
 import TransactionsReuse from './TransactionsReuse'
 import Paginate from '../../utils/Paginate';
 import search from '../../images/Iconly/Search.png'
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import DatePicker from "react-datepicker";
-
+import {format} from 'date-fns'
+import DateSelection from '../../SharedComponents/Date/DateSelection';
 import "react-datepicker/dist/react-datepicker.css";
 function Transactions() {
     const image='https://www.sketchappsources.com/resources/source-image/profile-illustration-gunaldi-yunus.png'
     const calenderImg='https://www.pngkey.com/png/full/109-1094594_calendar-clipart-png-transparent-calendar-icon-transparent-background.png'
     const [startDate, setStartDate] = useState(new Date());
+    const [EndDate, setEndDate] = useState(new Date());
+    console.log(format(startDate,'yyyy-MM-dd'))
+    const [showBtn,setshowBtn]=useState('block')
+    const HandelShowDate=()=>{
+        if(showBtn==='block'){
+            setshowBtn('none')
+        }else{
+            setshowBtn('block')
+        }
+             
+    }
+    console.log('startDate',startDate.toString())
+    console.log('EndDate',EndDate)
     return (
         <TransactionsContainer>
-                <span>Transactions</span>
+                <span id='HeaderTitle'>Transactions</span>
                 <Wraper>
         
                     <WraperHeader>
@@ -25,13 +39,19 @@ function Transactions() {
                
                 <input type='text' placeholder='Search...'/>
                 </div> 
-                <div className='DATE'>
-                    <img src={calenderImg} alt=''/>
-                  <DatePicker id='datepicker' selected={startDate} onChange={(date) => setStartDate(date)} isClearable showYearDropdown scrollableMonthYearDropdown
-                  placeholderText="Enter A Date"
-                  />
-                 </div>
-
+                <div className='BtnHeader'>
+                    <div className='calImg'>
+                    <img src='https://www.pvschool.com/wp-content/uploads/2017/03/calendar-icon.png' alt=''/>
+                    </div>
+                <Button onClick={HandelShowDate}>
+                {showBtn==='block'?'Pick A Date':'Hide'}
+                </Button>  
+                   
+                </div>
+                <span id='startDate'>Start Date is : {format(startDate,'yyyy-MM-dd')}</span> 
+                <span id='endDate'>  End   Date is : {format(EndDate,'yyyy-MM-dd')}</span> 
+                {showBtn==='block'?'': <DateSelection setshowBtn={setshowBtn} showBtn={showBtn} EndDate={EndDate} startDate={startDate}  setStartDate={setStartDate} setEndDate={setEndDate}/>}
+                 
                 <div className='sort'>
 
                 

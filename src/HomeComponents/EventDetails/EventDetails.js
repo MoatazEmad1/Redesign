@@ -6,7 +6,7 @@ function EventsDetails() {
 
     return (
         <EventsDetailsContainer>
-            <span>Event Details</span>
+            <span id='HeaderTitle'>Event Details</span>
             <Wraper>
                     <WraperHeader>
                         <div className='personInfo'>

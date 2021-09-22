@@ -5,7 +5,7 @@ function MyProfile() {
 
     return (
         <MyProfileContainer>
-          <span>My Profile</span>
+          <span id='HeaderTitle'>My Profile</span>
           <Wraper>
               <WraperHeader>
                   <div className='ImageContainer'>

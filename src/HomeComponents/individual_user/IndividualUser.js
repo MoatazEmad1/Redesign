@@ -1,18 +1,17 @@
 import React,{useState} from 'react'
-import {IndividualUserContainer,Wraper,WraperHeader,WraperContent} from '../../styles/IndividualUser.styles'
-import SearchIcon from '@material-ui/icons/Search';
+//import {Button,IndividualUserContainer,Wraper,WraperHeader,WraperContent} from '../../styles/IndividualUser.styles'
+
 import ReuseIndividualUser from './ReuseIndividualUser'
 import Paginate from '../../utils/Paginate';
 import ArrowDropDownIcon from '@material-ui/icons/ArrowDropDown';
 import search from '../../images/Iconly/Search.png'
-import DatePicker from "react-datepicker";
+
+import {Parent,Wraper,WraperHeader,WraperContent} from '../../SharedStyles/HomeComponentsStyles/Home.styles'
 function IndividualUser() {
-    const calenderImg='https://www.pngkey.com/png/full/109-1094594_calendar-clipart-png-transparent-calendar-icon-transparent-background.png'
-    const [startDate, setStartDate] = useState(new Date());
    
     return (
-        <IndividualUserContainer>
-            <span>Individual User</span>
+        <Parent>
+            <span id='HeaderTitle'>Individual User</span>
             <Wraper>
             <WraperHeader>
                 <div className='search'>
@@ -22,12 +21,16 @@ function IndividualUser() {
                
                 <input type='text' placeholder='Search...'/>
                 </div>
-                <div className='DATE'>
-                    <img src={calenderImg} alt=''/>
-                  <DatePicker id='datepicker' selected={startDate} onChange={(date) => setStartDate(date)} isClearable showYearDropdown scrollableMonthYearDropdown
-                  placeholderText="Enter A Date"
-                  />
-                 </div>
+                {/* <div className='BtnHeader'>
+                    <div className='calImg'>
+                    <img src='https://www.pvschool.com/wp-content/uploads/2017/03/calendar-icon.png' alt=''/>
+                    </div>
+                <Button onClick={HandelShowDate}>
+                {showBtn==='block'?'Pick A Date':'Hide'}
+                </Button>
+                </div>
+                {showBtn==='block'?'': <DateSelection/>} */}
+                
                 <div className='sort'>
 
               
@@ -42,16 +45,16 @@ function IndividualUser() {
                 </div>
             </WraperHeader>
             <WraperContent>
-                       <span id='pe'>Profile Image</span>
-                        <span id='fs'>First Name</span>
-                        <span id='le'>Last Name</span>
-                        <span id='email'>Email</span> 
-                        <span id='mobile'>Mobile</span>
-                        <span id='dob'>DOB</span>
-                        <span id='childrens'>Childrens</span>
-                        <span id='events'>Events</span>
-                        <span id='ts'>Transactions</span>
-                        <span id='an'>Action</span> 
+                       <span id='IndividualUser_Profile_Image'>Profile Image</span>
+                        <span id='IndividualUser_First_Name'>First Name</span>
+                        <span id='IndividualUser_Last_Name'>Last Name</span>
+                        <span id='IndividualUser_Email'>Email</span> 
+                        <span id='IndividualUser_Mobile'>Mobile</span>
+                        <span id='IndividualUser_DOB'>DOB</span>
+                        <span id='IndividualUser_Childrens'>Childrens</span>
+                        <span id='IndividualUser_Events'>Events</span>
+                        <span id='IndividualUser_Transactions'>Transactions</span>
+                        <span id='IndividualUser_Action'>Action</span> 
       
 
                      
@@ -70,7 +73,7 @@ function IndividualUser() {
             <ReuseIndividualUser fs='moataz' ls='emad' email='moataz@kiweapp.com' mobile='01554477068' dob='02 oct 2020'/>
             </Wraper>
             <Paginate/>
-        </IndividualUserContainer>
+        </Parent>
     )
 }
 
